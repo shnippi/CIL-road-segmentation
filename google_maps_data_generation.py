@@ -11,7 +11,7 @@ from PIL import Image
 from natsort import natsorted
 from skimage.io import imsave
 
-NUM_SAMPLES = 100
+NUM_SAMPLES = 1000
 
 los_angeles = [
     {'n': 34.269260, 'w': -118.604202, 's': 34.171040, 'e': -118.370722},
@@ -96,7 +96,7 @@ else:
 
 
 # Safety measure for too many samples
-if NUM_SAMPLES >= 0:
+if NUM_SAMPLES > 1000:
     sys.exit("You request > 1000 pictures!. We exit the program. Either comment this line or request less samples")
 
 

@@ -9,8 +9,14 @@ Some useful Links:
 ## Setup (With Training)
 1. Download datasets
 2. Create the following data-file structure and save your data into the folders: <br>
-<img src="images/data-structure.jpg" height=220px>
+<img src="images/data-structure.png" height=220px>
 
 
 ## Setup (Only Inference)
 1. TODO
+
+
+## Google Data set Creation
+1. Make file: `api_key.txt` and paste your google maps API key (static maps)
+2. Create necessary File Structure (See Setup with Training)
+3. Run: `python3 google_maps_data_generation.py`

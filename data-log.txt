@@ -1,0 +1,2092 @@
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/32.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/35.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/40.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/52.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/61.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/66.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/83.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/85.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/87.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/102.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/144.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/170.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/182.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/198.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/224.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/225.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/226.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/249.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/251.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/255.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/262.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/286.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/311.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/330.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/335.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/382.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/385.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/422.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/448.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/466.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/472.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/495.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/499.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/530.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/532.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/541.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/548.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/556.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/560.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/569.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/591.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/650.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/654.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/658.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/661.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/664.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/680.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/681.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/690.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/700.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/726.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/739.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/742.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/756.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/758.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/800.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/804.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/805.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/858.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/875.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/882.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/898.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/961.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/971.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/979.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/997.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1003.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1008.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1013.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1023.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1033.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1036.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1038.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1046.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1084.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1105.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1111.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1113.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1126.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1141.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1146.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1157.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1169.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1177.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1191.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1226.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1231.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1241.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1251.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1263.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1295.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1301.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1308.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1313.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1328.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1339.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1342.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1354.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1355.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1356.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1372.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1376.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1384.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1406.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1410.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1413.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1448.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1498.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1516.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1518.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1544.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1545.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1557.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1561.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1605.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1619.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1631.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1632.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1648.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1664.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1680.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1702.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1758.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1787.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1806.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1818.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1829.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1840.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1843.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1860.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1861.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1868.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1870.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1910.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/1971.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2021.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2024.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2033.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2069.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2111.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2119.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2122.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2140.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2155.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2157.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2165.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2178.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2184.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2222.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2262.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2287.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2302.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2327.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2350.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2352.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2360.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2362.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2363.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2381.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2395.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2397.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2416.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2431.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2439.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2452.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2460.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2477.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2479.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2494.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2500.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2502.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2554.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2567.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2584.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2595.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2611.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2638.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2641.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2642.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2644.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2650.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2672.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2679.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2696.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2724.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2772.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2791.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2796.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2803.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2822.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2840.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2851.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2855.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2864.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2892.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2899.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2907.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2915.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2932.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2951.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2956.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/2990.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3066.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3075.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3077.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3095.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3127.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3133.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3155.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3166.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3173.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3188.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3197.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3200.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3255.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3264.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3272.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3289.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3292.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3293.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3294.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3300.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3307.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3324.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3335.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3369.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3378.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3390.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3415.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3455.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3474.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3491.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3527.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3546.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3589.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3604.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3611.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3641.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3642.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3672.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3680.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3727.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3730.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3748.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3754.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3755.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3811.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3814.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3816.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3821.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3825.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3830.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3832.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3839.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3856.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3864.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3867.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3868.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3890.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3891.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3906.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3912.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3913.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3917.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/3942.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4011.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4021.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4027.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4037.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4049.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4050.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4064.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4086.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4094.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4136.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4144.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4159.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4180.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4181.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4193.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4207.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4212.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4213.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4235.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4269.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4270.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4276.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4281.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4282.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4283.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4300.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4304.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4310.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4318.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4329.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4335.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4337.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4364.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4375.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4386.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4388.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4431.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4475.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4479.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4486.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4500.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4509.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4510.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4522.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4524.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4525.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4538.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4558.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4569.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4570.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4576.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4594.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4601.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4641.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4656.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4686.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4768.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4769.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4777.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4802.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4807.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4816.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4820.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4844.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4845.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4846.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4852.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4853.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4854.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4855.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4886.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4887.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4898.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4913.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4937.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4957.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4962.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/4970.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5004.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5016.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5035.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5044.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5047.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5051.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5057.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5062.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5072.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5075.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5091.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5111.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5198.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5199.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5248.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5283.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5298.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5301.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5302.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5307.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5313.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5315.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5334.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5337.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5349.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5360.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5369.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5436.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5439.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5442.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5517.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5519.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5545.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5552.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5557.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5562.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5590.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5602.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5634.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5642.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5650.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5662.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5680.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5732.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5738.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5759.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5766.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5772.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5777.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5778.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5791.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5797.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5802.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5810.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5825.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5832.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5838.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5858.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5874.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5878.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5882.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5888.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5890.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5897.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5899.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5927.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5937.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5946.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5957.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5967.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5977.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5987.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5993.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/5997.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6002.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6041.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6052.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6076.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6077.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6103.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6112.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6114.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6140.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6162.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6169.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6174.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6208.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6210.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6226.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6293.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6309.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6326.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6338.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6354.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6358.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6392.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6400.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6402.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6403.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6433.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6440.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6491.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6498.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6507.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6518.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6543.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6544.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6602.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6623.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6624.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6629.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6637.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6649.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6650.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6667.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6670.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6675.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6690.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6697.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6702.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6713.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6764.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6768.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6802.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6820.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6829.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6839.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6841.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6894.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/6914.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7010.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7049.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7050.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7053.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7056.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7064.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7072.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7082.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7115.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7119.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7120.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7122.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7123.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7130.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7133.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7134.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7147.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7174.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7208.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7210.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7218.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7229.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7233.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7238.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7251.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7259.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7292.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7302.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7307.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7308.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7322.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7337.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7357.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7379.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7387.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7424.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7426.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7455.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7457.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7463.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7491.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7493.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7578.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7582.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7586.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7609.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7629.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7648.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7649.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7667.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7675.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7694.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7712.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7730.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7754.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7771.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7779.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7819.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7862.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7871.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7900.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7903.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7910.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7916.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7968.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/7984.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8033.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8047.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8053.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8089.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8103.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8107.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8121.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8125.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8133.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8145.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8154.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8161.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8165.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8167.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8173.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8174.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8177.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8210.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8224.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8226.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8250.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8251.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8275.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8283.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8296.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8315.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8319.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8328.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8342.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8354.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8356.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8372.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8430.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8462.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8503.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8548.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8616.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8621.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8677.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8690.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8732.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8742.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8766.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8777.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8817.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8818.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8830.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8832.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8843.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8848.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8854.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8856.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8864.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8866.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8875.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8892.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8905.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8918.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8921.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8974.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8976.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/8999.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9001.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9024.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9042.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9074.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9086.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9100.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9113.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9120.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9140.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9164.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9183.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9194.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9217.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9226.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9227.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9233.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9270.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9297.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9319.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9370.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9371.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9380.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9412.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9421.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9426.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9439.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9456.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9480.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9498.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9542.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9551.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9560.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9562.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9574.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9592.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9615.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9630.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9636.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9644.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9653.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9660.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9675.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9708.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9726.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9732.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9733.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9757.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9816.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9847.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9849.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9858.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9860.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9867.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9885.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9887.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9890.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9911.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9916.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9918.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9982.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/9985.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10022.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10060.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10139.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10143.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10180.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10215.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10216.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10224.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10244.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10254.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10274.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10280.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10282.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10287.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10288.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10289.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10298.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10304.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10317.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10330.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10335.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10341.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10342.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10389.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10390.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10395.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10412.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10426.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10434.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10435.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10451.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10485.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10486.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10487.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10502.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10506.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10530.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10544.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10548.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10551.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10566.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10586.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10598.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10703.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10717.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10724.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10737.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10748.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10775.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10776.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10784.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10786.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10799.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10841.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10852.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10885.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10892.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10907.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10911.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10922.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10929.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10938.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10944.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10969.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/10974.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11000.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11001.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11020.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11036.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11038.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11044.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11076.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11080.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11106.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11109.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11125.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11127.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11148.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11172.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11175.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11183.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11198.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11222.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11231.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11233.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11237.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11241.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11262.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11287.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11310.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11347.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11350.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11352.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11354.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11362.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11363.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11368.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11369.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11384.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11397.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11406.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11411.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11420.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11423.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11429.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11455.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11479.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11497.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11509.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11516.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11518.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11520.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11528.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11543.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11578.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11615.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11619.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11636.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11640.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11661.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11668.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11679.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11692.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11707.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11710.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11723.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11762.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11774.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11777.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11782.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11801.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11806.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11816.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11818.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11860.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11866.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11867.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11871.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11881.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11895.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11900.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11912.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11920.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11953.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11968.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11970.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11974.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11981.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/11989.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12011.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12016.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12040.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12046.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12058.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12060.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12071.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12078.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12081.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12095.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12107.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12133.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12139.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12170.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12210.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12220.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12227.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12230.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12251.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12269.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12285.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12292.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12324.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12338.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12342.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12373.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12376.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12388.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12400.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12405.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12413.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12419.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12427.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12442.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12486.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12506.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12511.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12512.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12536.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12543.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12545.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12607.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12612.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12665.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12672.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12705.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12706.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12734.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12751.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12791.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12812.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12813.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12823.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12849.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12884.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12892.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12893.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12901.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12907.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12925.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12941.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12942.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12944.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/12951.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13003.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13012.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13083.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13085.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13086.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13089.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13092.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13100.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13110.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13136.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13152.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13174.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13187.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13194.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13276.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13289.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13298.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13320.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13331.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13357.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13376.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13388.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13392.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13411.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13413.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13427.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13479.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13487.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13492.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13493.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13534.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13554.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13577.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13587.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13592.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13599.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13600.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13611.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13613.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13626.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13637.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13643.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13651.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13655.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13657.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13666.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13679.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13683.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13723.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13725.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13733.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13752.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13769.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13773.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13776.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13789.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13842.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13854.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13861.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13864.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13910.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13928.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13952.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13964.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13991.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/13997.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14000.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14006.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14017.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14027.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14035.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14051.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14071.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14090.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14094.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14096.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14107.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14128.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14144.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14170.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14187.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14198.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14212.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14235.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14268.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14272.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14273.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14279.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14307.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14326.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14337.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14338.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14360.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14364.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14370.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14396.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14403.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14444.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14473.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14495.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14500.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14501.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14503.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14508.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14521.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14528.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14535.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14546.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14551.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14562.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14619.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14649.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14688.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14710.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14722.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14731.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14748.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14790.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14810.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14845.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14850.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14856.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14864.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14865.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14867.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14880.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14885.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14891.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14902.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14912.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14929.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14949.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14954.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14963.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/14969.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15007.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15009.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15022.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15028.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15031.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15037.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15043.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15048.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15054.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15056.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15063.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15070.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15090.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15101.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15113.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15125.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15161.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15165.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15166.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15191.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15195.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15202.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15214.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15225.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15232.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15249.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15269.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15280.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15319.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15333.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15354.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15366.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15373.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15377.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15414.png is a low contrast image
+  imsave(roadmap_path, roadmap)
+google_maps_data_generation.py:86: UserWarning: ./data/google/roadmaps/15461.png is a low contrast image
+  imsave(roadmap_path, roadmap)

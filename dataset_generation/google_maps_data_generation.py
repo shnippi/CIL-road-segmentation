@@ -80,14 +80,14 @@ def pick_random_image_from_city(x, y, zoom_=18, width_=400, height_=400):
 
 # Save images and mask in the appropriate location
 def save_image(image, roadmap):
-    img_path = "./data/google/images/{}.png".format(counter)
-    roadmap_path = "./data/google/roadmaps/{}.png".format(counter)
+    img_path = "../data/google/images/{}.png".format(counter)
+    roadmap_path = "../data/google/roadmaps/{}.png".format(counter)
     imsave(img_path, image)
     imsave(roadmap_path, roadmap)
 
 
 # Find out how many images there already are such that we dont overwrite any.
-image_list = glob.glob('./data/google/images/*')
+image_list = glob.glob('../data/google/images/*')
 if len(image_list) == 0:
     counter = 0
 else:

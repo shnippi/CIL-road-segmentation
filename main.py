@@ -6,8 +6,8 @@ from albumentations.pytorch import ToTensorV2
 from tqdm import tqdm
 import torch.nn as nn
 import torch.optim as optim
-from model import UNET
-from utils import (
+from models.model import UNET
+from utils.data_handling import (
     load_checkpoint,
     save_checkpoint,
     get_loaders,

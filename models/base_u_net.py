@@ -17,11 +17,12 @@ class DoubleConv(nn.Module):
     def forward(self, x):
         return self.conv(x)
 
-class UNET(nn.Module):
+
+class BASE_U_NET(nn.Module):
     def __init__(
             self, in_channels=3, out_channels=1, features=[64, 128, 256, 512],
     ):
-        super(UNET, self).__init__()
+        super(BASE_U_NET, self).__init__()
         self.ups = nn.ModuleList()
         self.downs = nn.ModuleList()
         self.pool = nn.MaxPool2d(kernel_size=2, stride=2)
@@ -70,7 +71,7 @@ class UNET(nn.Module):
 # checks if output shape matches input shape
 def test():
     x = torch.randn((3, 1, 161, 161))
-    model = UNET(in_channels=1, out_channels=1)
+    model = BASE_U_NET(in_channels=1, out_channels=1)
     preds = model(x)
     assert preds.shape == x.shape
 

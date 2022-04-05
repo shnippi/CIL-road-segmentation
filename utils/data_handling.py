@@ -1,5 +1,4 @@
 import torch
-import torchvision
 from dataset.map_dataset import MapDataset
 from dataset.paired_dataset import PairedDataset
 from torch.utils.data import DataLoader

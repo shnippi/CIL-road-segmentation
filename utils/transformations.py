@@ -1,34 +1,32 @@
-import torchvision.transforms.functional as TF
+from torchvision import transforms
 
 def get_transforms(config):
 
     IMAGE_HEIGHT = config['image_height']
     IMAGE_WIDTH = config['image_width']
 
-    train_transform = TF.Compose(
+    train_transform = transforms.Compose(
         [
-            TF.Resize(height=IMAGE_HEIGHT, width=IMAGE_WIDTH),
-            TF.Rotate(limit=35, p=1.0),
-            TF.HorizontalFlip(p=0.5),
-            TF.VerticalFlip(p=0.1),
-            TF.Normalize(
+            transforms.Resize(size=(IMAGE_HEIGHT, IMAGE_WIDTH)),
+            transforms.RandomRotation(10),
+            transforms.RandomHorizontalFlip(p=0.5),
+            transforms.RandomVerticalFlip(p=0.1),
+            transforms.Normalize(
                 mean=[0.0, 0.0, 0.0],
-                std=[1.0, 1.0, 1.0],
-                max_pixel_value=255.0,
+                std=[1.0, 1.0, 1.0]
             ),
-            TF.ToTensor(),
+            transforms.ToTensor(),
         ],
     )
 
-    val_transforms = TF.Compose(
+    val_transforms = transforms.Compose(
         [
-            TF.Resize(height=IMAGE_HEIGHT, width=IMAGE_WIDTH),
-            TF.Normalize(
+            transforms.Resize(size=(IMAGE_HEIGHT, IMAGE_WIDTH)),
+            transforms.Normalize(
                 mean=[0.0, 0.0, 0.0],
-                std=[1.0, 1.0, 1.0],
-                max_pixel_value=255.0,
+                std=[1.0, 1.0, 1.0]
             ),
-            TF.ToTensor(),
+            transforms.ToTensor(),
         ],
     )
 

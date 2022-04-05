@@ -3,3 +3,4 @@
 /checkpoints
 /__pycache__
 api_key.txt
+*/__pycache__

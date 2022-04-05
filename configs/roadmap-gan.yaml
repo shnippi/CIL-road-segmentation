@@ -1,2 +1,19 @@
 seed: 1234
+
 model: "roadmap-gan"
+dataset: "PairedDataset"
+
+epochs: 20
+wandb_logging: False
+image_height: 400
+image_width: 400
+batch_size: 1
+num_workers: 1
+pin_memory: True
+learning_rate: 0.001
+
+load_from_checkpoint: False
+loss_function: "BCEWithLogitsLoss"
+
+root_A: "data/data-google/images"
+root_B: "data/data-google/roadmaps"

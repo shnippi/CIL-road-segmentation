@@ -37,7 +37,7 @@ def get_dataloaders(config):
 
     train_transform,val_transform = get_transforms(config)
 
-    if config['Dataset'] == 'MapDataset':
+    if config['dataset'] == 'MapDataset':
         train_dataset = MapDataset(
             image_dir=config['train_dir'],
             mask_dir=config['train_maskdir'],
@@ -49,7 +49,7 @@ def get_dataloaders(config):
             mask_dir=config['val_maskdir'],
             transform=val_transform,
         )
-    elif config['Dataset'] == 'PairedDataset':
+    elif config['dataset'] == 'PairedDataset':
         train_dataset = PairedDataset(
             root_A=config['root_A'],
             root_B=config['root_B'],

@@ -12,7 +12,7 @@ from utils.validation_functions import get_val_fn
 def main():
     # Config arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config_path")
+    parser.add_argument("--config_path", default="configs/roadmap-gan.yaml")
     args = parser.parse_args()
     config = yaml.safe_load(open(args.config_path, "r"))
     seed = config['seed']

@@ -1,13 +1,12 @@
-import torch
 import yaml
 import argparse
 import wandb
-import torch.optim as optim
 from utils.reproducability import set_seed, set_device
 from utils.data_handling import get_dataloaders, load_model, save_checkpoint
 from utils.loss_functions import get_loss_function
 from utils.training_functions import get_train_fn
 from utils.validation_functions import get_val_fn
+from utils.optimizers import get_optimizers
 
 def main():
     # Config arguments
@@ -35,35 +34,32 @@ def main():
     train_dataloader, val_dataloader = get_dataloaders(config)
 
     # Load model (Takes also care of: Continue training from checkpoint)
-    model = load_model(config, device)
-    wandb.watch(model)
+    models = load_model(config, device)
     
     # Get Loss function
     loss_fn = get_loss_function(config['loss_function'])
 
     # Set optimizer
-    optimizer = optim.Adam(model.parameters(), lr=config['learning_rate'])
+    optimizers = get_optimizers(config)
 
     # Get training and validation function
     train_fn = get_train_fn(config)
     val_fn = get_val_fn(config)
 
     # Before we start training we validate our model for a first time
-    val_fn(config, model, val_dataloader, epoch, device)
+    val_fn(config, models, val_dataloader, epoch, device)
 
-    # Loop through the Epoch
+    # Loop through the Epochs
     for epoch in range(epochs):
         try:
-            train_fn(model, loss_fn, optimizer, train_dataloader, epoch, device)
+            # Run through the epoch
+            train_fn(models, loss_fn, optimizers, train_dataloader, epoch, device)
 
             # save model
-            checkpoint = {
-                "state_dict": model.state_dict(),
-                "optimizer": optimizer.state_dict(),
-            }
-            save_checkpoint(checkpoint)
+            save_checkpoint(models, optimizers, config)
 
-            val_fn(config, model, val_dataloader, epoch, device)
+            # Validate the current models
+            val_fn(config, models, val_dataloader, epoch, device)
 
         except:
             print("Exception occured. We skip to next epoch")

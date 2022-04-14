@@ -2,16 +2,23 @@ import torch
 from dataset.map_dataset import MapDataset
 from dataset.paired_dataset import PairedDataset
 from torch.utils.data import DataLoader
-from utils.transformations import get_transforms
 from models.base_u_net import BASE_U_NET
-from models.roadmap_gan import ROADMAP_GAN
+from models.roadmap_gan import Pix2Pix_Generator
+from models.roadmap_gan import Pix2Pix_Descriminator
+from utils.transformations import get_transforms
 
 def load_model(config, device):
-
+    '''
+    Return a dictionary of all the needed models. In Case of a GAN the dictionary contains the discriminator and generator.
+    '''
     if config['model'] == "base-u-net":
         model = BASE_U_NET(in_channels=3, out_channels=1).to(device)
+        models = {'unet': model}
+        
     elif config['model'] == 'roadmap-gan':
-        model = ROADMAP_GAN().to(device)
+        gen = Pix2Pix_Generator()
+        disc = Pix2Pix_Descriminator()
+        models = {'gen': gen, 'disc': disc}
     else:
         raise ValueError("Your specified model does not exist")
 
@@ -19,17 +26,20 @@ def load_model(config, device):
         print("Loading from checkpoint")
         load_checkpoint(torch.load(config['checkpoint_path']), model)
 
-    return model
+    return models
     
 
-def save_checkpoint(state, filename="my_checkpoint.pth.tar"):
-    print("=> Saving checkpoint")
-    torch.save(state, filename)
+def save_checkpoint(models, optimizers, config):
+    # TODO
+    # Iterate through models and optimizers and save them
+    return
 
 
 def load_checkpoint(checkpoint, model):
-    print("=> Loading checkpoint")
-    model.load_state_dict(checkpoint["state_dict"])
+    # TODO
+    # Load from checkpoint files. Here we may need actually again thw switch statement with different logic
+    # for different models
+    return
 
 
 def get_dataloaders(config):

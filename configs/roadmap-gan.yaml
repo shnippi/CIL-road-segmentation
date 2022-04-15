@@ -5,8 +5,8 @@ dataset: "PairedDataset"
 
 epochs: 20
 wandb_logging: False
-image_height: 400
-image_width: 400
+image_height: 512 # They are actually 400 (We upsample)
+image_width: 512 # They are actually 400 (We upsample)
 batch_size: 1
 num_workers: 1
 pin_memory: True

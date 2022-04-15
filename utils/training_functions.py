@@ -44,6 +44,8 @@ def roadmap_gan_train_fn(models, loss_fn, optimizers, train_dataloader, epoch, d
     gen.train()
     disc.train()
 
+    l1 = torch.nn.L1Loss()
+
     loss_sum = 0
 
     with tqdm(train_dataloader) as tepoch:
@@ -69,7 +71,7 @@ def roadmap_gan_train_fn(models, loss_fn, optimizers, train_dataloader, epoch, d
             # Train Generator
             D_fake = disc(A, B_fake)
             G_fake_loss = loss_fn(D_fake, torch.ones_like(D_fake))
-            L1 = torch.nn.L1loss(B_fake, B) * 100
+            L1 = l1(B_fake, B) * 100
             G_loss = G_fake_loss + L1
 
             opt_gen.zero_grad()
@@ -77,6 +79,6 @@ def roadmap_gan_train_fn(models, loss_fn, optimizers, train_dataloader, epoch, d
             opt_gen.step()
             
             # Update Progressbar
-            loss_sum += G_loss.item()
+            loss_sum += G_loss.item() + D_loss.item()
             tepoch.set_description(f"Epoch {epoch}")
             tepoch.set_postfix(loss = loss_sum/(batch+1))

@@ -16,8 +16,8 @@ def load_model(config, device):
         models = {'unet': model}
         
     elif config['model'] == 'roadmap-gan':
-        gen = Pix2Pix_Generator()
-        disc = Pix2Pix_Descriminator()
+        gen = Pix2Pix_Generator().to(device)
+        disc = Pix2Pix_Descriminator().to(device)
         models = {'gen': gen, 'disc': disc}
     else:
         raise ValueError("Your specified model does not exist")
@@ -44,7 +44,7 @@ def load_checkpoint(checkpoint, model):
 
 def get_dataloaders(config):
 
-    train_transform,val_transform = get_transforms(config)
+    train_transform, val_transform = get_transforms(config)
 
     if config['dataset'] == 'MapDataset':
         train_dataset = MapDataset(
@@ -62,13 +62,15 @@ def get_dataloaders(config):
         train_dataset = PairedDataset(
             root_A=config['root_A'],
             root_B=config['root_B'],
-            phase='train'
+            phase='train',
+            transform=train_transform
         )
 
         val_dataset = PairedDataset(
             root_A=config['root_A'],
             root_B=config['root_B'],
-            phase='val'
+            phase='val',
+            transform=val_transform
         )
     else:
         raise ValueError("Your specified dataset does not exist")

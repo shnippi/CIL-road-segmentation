@@ -3,7 +3,7 @@ import torch.nn as nn
 
 class Pix2Pix_Generator(nn.Module):
     def __init__(self, in_channles=3, features=64):
-        super.__init__()
+        super().__init__()
         self.initial_down = nn.Sequential(
             nn.Conv2d(in_channles, features, 4, stride=2, padding=1, padding_mode="reflect"),
             nn.LeakyReLU(0.2),
@@ -60,7 +60,7 @@ class Pix2Pix_Generator(nn.Module):
 
 class Pix2Pix_Descriminator(nn.Module):
     def __init__(self, in_channels=3, features=[64, 128, 256, 512]):
-        super.__init__()
+        super().__init__()
         self.initial_Block = nn.Sequential(
             nn.Conv2d(in_channels*2, features[0], kernel_size=4, stride=2, padding=1, padding_mode="reflect"),
             nn.LeakyReLU(0.2),
@@ -70,9 +70,9 @@ class Pix2Pix_Descriminator(nn.Module):
         in_channels = features[0]
         for feature in features[1:]:
             layers.append(
-                CNNBlock(in_channels, feature, stride=1  if feature == feature[-1] else 2)
+                CNNBlock(in_channels, feature, stride=1  if feature == features[-1] else 2)
             )
-            in_channels = features
+            in_channels = feature
         
         layers.append(
             nn.Conv2d(in_channels, 1, kernel_size=4, stride=1, padding=1, padding_mode='reflect')

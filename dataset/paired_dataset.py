@@ -1,9 +1,10 @@
 import os
 from torch.utils.data import Dataset
+from PIL import Image
 
 class PairedDataset(Dataset):
 
-    def __init__(self, root_A, root_B, phase):
+    def __init__(self, root_A, root_B, phase, transform):
         """
         Args:
             root_dir (string): Directory of the training data (subject already included)
@@ -12,6 +13,7 @@ class PairedDataset(Dataset):
 
         self.root_A = root_A
         self.root_B = root_B
+        self.transform = transform
 
         # List of all the image paths from A
         dir_A = os.path.join(root_A, phase)
@@ -27,7 +29,13 @@ class PairedDataset(Dataset):
         item_A = self.paths_A[idx]
         item_B = self.paths_B[idx]
 
-        return {'A': item_A, 'B': item_B}
+        image_A = Image.open(item_A)
+        image_B = Image.open(item_B)
+
+        image_A = self.transform(image_A)
+        image_B = self.transform(image_B)
+
+        return {'A': image_A, 'B': image_B}
 
     def __len__(self):
         return len(self.paths_A) + len(self.paths_B)

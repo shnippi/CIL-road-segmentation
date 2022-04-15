@@ -40,18 +40,18 @@ def main():
     loss_fn = get_loss_function(config['loss_function'])
 
     # Set optimizer
-    optimizers = get_optimizers(config)
+    optimizers = get_optimizers(models, config)
 
     # Get training and validation function
     train_fn = get_train_fn(config)
     val_fn = get_val_fn(config)
 
     # Before we start training we validate our model for a first time
-    val_fn(config, models, val_dataloader, epoch, device)
+    val_fn(config, models, val_dataloader, 0, device)
 
     # Loop through the Epochs
     for epoch in range(epochs):
-        try:
+        #try:
             # Run through the epoch
             train_fn(models, loss_fn, optimizers, train_dataloader, epoch, device)
 
@@ -61,9 +61,9 @@ def main():
             # Validate the current models
             val_fn(config, models, val_dataloader, epoch, device)
 
-        except:
-            print("Exception occured. We skip to next epoch")
-            continue
+        # except:
+        #     print("Exception occured. We skip to next epoch")
+        #     continue
 
 
 if __name__ == "__main__":

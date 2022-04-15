@@ -1,7 +1,7 @@
 seed: 1234
 
 batch_size: 4
-num_workers: 12
+num_workers: 1
 pin_memoery: True
 
 image_height: 400

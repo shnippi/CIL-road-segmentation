@@ -21,7 +21,7 @@ def main():
     mode = "online" if config['wandb_logging'] else "disabled"
     wandb.init(
         project="cil-road-segmentation", 
-        entity="cil-road-segmentation", 
+        entity="davincis", 
         config=config, 
         mode=mode
     )
@@ -47,23 +47,20 @@ def main():
     val_fn = get_val_fn(config)
 
     # Before we start training we validate our model for a first time
-    val_fn(config, models, val_dataloader, 0, device)
+    val_fn(models, loss_fn, val_dataloader, 0, config, device)
 
     # Loop through the Epochs
     for epoch in range(epochs):
-        #try:
-            # Run through the epoch
-            train_fn(models, loss_fn, optimizers, train_dataloader, epoch, device)
+        # Run through the epoch
+        train_fn(models, loss_fn, optimizers, train_dataloader, epoch, config, device)
 
-            # save model
-            save_checkpoint(models, optimizers, config)
+        # save model
+        save_checkpoint(models, optimizers, config)
 
-            # Validate the current models
-            val_fn(config, models, val_dataloader, epoch, device)
+        # Validate the current models
+        val_fn(models, loss_fn, val_dataloader, epoch, config, device)
 
-        # except:
-        #     print("Exception occured. We skip to next epoch")
-        #     continue
+    wandb.finish()
 
 
 if __name__ == "__main__":

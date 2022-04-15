@@ -1,4 +1,5 @@
 import torch
+import wandb
 from dataset.map_dataset import MapDataset
 from dataset.paired_dataset import PairedDataset
 from torch.utils.data import DataLoader
@@ -14,11 +15,13 @@ def load_model(config, device):
     if config['model'] == "base-u-net":
         model = BASE_U_NET(in_channels=3, out_channels=1).to(device)
         models = {'unet': model}
+        wandb.watch(models['unet'])
         
     elif config['model'] == 'roadmap-gan':
         gen = Pix2Pix_Generator().to(device)
         disc = Pix2Pix_Descriminator().to(device)
         models = {'gen': gen, 'disc': disc}
+        wandb.watch((models['gen'], models['disc']))
     else:
         raise ValueError("Your specified model does not exist")
 

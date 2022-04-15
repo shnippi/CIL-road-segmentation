@@ -1,10 +1,9 @@
-seed: 1234
+wandb_logging: True
 
 model: "roadmap-gan"
 dataset: "PairedDataset"
 
 epochs: 20
-wandb_logging: False
 image_height: 512 # They are actually 400 (We upsample)
 image_width: 512 # They are actually 400 (We upsample)
 batch_size: 1
@@ -14,6 +13,9 @@ learning_rate: 0.001
 
 load_from_checkpoint: False
 loss_function: "BCEWithLogitsLoss"
+l1_lambda: 100
+
+seed: 1234
 
 root_A: "data/data-google/images"
 root_B: "data/data-google/roadmaps"

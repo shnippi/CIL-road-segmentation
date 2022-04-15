@@ -24,7 +24,7 @@ class Pix2Pix_Generator(nn.Module):
         self.up1 = BlockUp(features*8*1, features*8, act="relu", use_dropout=True)
         self.up2 = BlockUp(features*8*2, features*8, act="relu", use_dropout=True)
         self.up3 = BlockUp(features*8*2, features*8, act="relu", use_dropout=True)
-        self.up4 = BlockUp(features*8*2, features*3, act="relu", use_dropout=False)
+        self.up4 = BlockUp(features*8*2, features*8, act="relu", use_dropout=False)
         self.up5 = BlockUp(features*8*2, features*4, act="relu", use_dropout=False)
         self.up6 = BlockUp(features*4*2, features*2, act="relu", use_dropout=False)
         self.up7 = BlockUp(features*2*2, features*1, act="relu", use_dropout=False)
@@ -47,11 +47,11 @@ class Pix2Pix_Generator(nn.Module):
 
         up1 = self.up1(bottleneck)
         up2 = self.up2(torch.cat([up1,d7], 1))
-        up3 = self.up2(torch.cat([up2,d6], 1))
-        up4 = self.up2(torch.cat([up3,d5], 1))
-        up5 = self.up2(torch.cat([up4,d4], 1))
-        up6 = self.up2(torch.cat([up5,d3], 1))
-        up7 = self.up2(torch.cat([up6,d2], 1))
+        up3 = self.up3(torch.cat([up2,d6], 1))
+        up4 = self.up4(torch.cat([up3,d5], 1))
+        up5 = self.up5(torch.cat([up4,d4], 1))
+        up6 = self.up6(torch.cat([up5,d3], 1))
+        up7 = self.up7(torch.cat([up6,d2], 1))
 
         final = self.finalup(torch.cat([up7, d1], 1))
 
@@ -138,3 +138,12 @@ class CNNBlock(nn.Module):
     def forward(self, x):
         return self.conv(x)
 
+
+def test():
+    x = torch.randn(1,3,512,512)
+    model = Pix2Pix_Generator()
+    preds = model(x)
+    print(preds.shape)
+
+if __name__ == "__main__":
+    test()

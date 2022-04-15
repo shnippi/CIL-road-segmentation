@@ -23,9 +23,7 @@ class PairedDataset(Dataset):
         dir_B = os.path.join(root_B, phase)
         self.paths_B = sorted(create_path_list(dir_B))
 
-
     def __getitem__(self, idx):
-
         item_A = self.paths_A[idx]
         item_B = self.paths_B[idx]
 
@@ -38,7 +36,11 @@ class PairedDataset(Dataset):
         return {'A': image_A, 'B': image_B}
 
     def __len__(self):
-        return len(self.paths_A) + len(self.paths_B)
+        '''
+        Return the range of the idx. Note that we have N pictures from A and N pictures from B
+        However in each iteration we use a picture from A and from B. Hence we only have N samples, and not 2N.
+        '''
+        return len(self.paths_A)
 
 
 def create_path_list(dir):

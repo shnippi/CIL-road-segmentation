@@ -1,21 +1,24 @@
+debug: False
 wandb_logging: True
+
 
 model: "roadmap-gan"
 dataset: "PairedDataset"
-
-epochs: 20
-image_height: 512 # They are actually 400 (We upsample)
-image_width: 512 # They are actually 400 (We upsample)
-batch_size: 1
-num_workers: 1
-pin_memory: True
-learning_rate: 0.001
+root_A: "data/data-google/images"
+root_B: "data/data-google/roadmaps"
+loss_function: "BCEWithLogitsLoss"
 
 load_from_checkpoint: False
-loss_function: "BCEWithLogitsLoss"
+image_height: 512 # They are actually 400 (We upsample)
+image_width: 512 # They are actually 400 (We upsample)
+batch_size: 8
+num_workers: 12
+pin_memory: False
+
+epochs: 20
+learning_rate: 0.0002
+beta1: 0.5
+beta2: 0.999
 l1_lambda: 100
 
 seed: 1234
-
-root_A: "data/data-google/images"
-root_B: "data/data-google/roadmaps"

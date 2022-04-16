@@ -5,7 +5,7 @@ from utils.reproducability import set_seed, set_device
 from utils.data_handling import get_dataloaders, load_model, save_checkpoint
 from utils.loss_functions import get_loss_function
 from utils.training_functions import get_train_fn
-from utils.validation_functions import get_val_fn
+from utils.validation_functions import get_val_fn, get_val_small_fn
 from utils.optimizers import get_optimizers
 
 def main():
@@ -18,7 +18,7 @@ def main():
     epochs = config['epochs']
 
     # Wandb support
-    mode = "online" if config['wandb_logging'] else "disabled"
+    mode = "online" if (config['wandb_logging'] and not config['debug'])else "disabled"
     wandb.init(
         project="cil-road-segmentation", 
         entity="davincis", 
@@ -45,14 +45,15 @@ def main():
     # Get training and validation function
     train_fn = get_train_fn(config)
     val_fn = get_val_fn(config)
+    val_small_fn = get_val_small_fn(config)
 
     # Before we start training we validate our model for a first time
-    val_fn(models, loss_fn, val_dataloader, 0, config, device)
+    val_fn(models, loss_fn, val_dataloader, -1, config, device)
 
     # Loop through the Epochs
     for epoch in range(epochs):
         # Run through the epoch
-        train_fn(models, loss_fn, optimizers, train_dataloader, epoch, config, device)
+        train_fn(models, loss_fn, optimizers, train_dataloader, val_small_fn, val_dataloader, epoch, config, device)
 
         # save model
         save_checkpoint(models, optimizers, config)

@@ -8,8 +8,8 @@ def get_optimizers(models, config):
         opt = optim.Adam(models['unet'].parameters(), lr=config['learning_rate'])
         optimizers = {'opt': opt}
     elif config['model'] == 'roadmap-gan':
-        opt_gen = optim.Adam(models['gen'].parameters(), lr=config['learning_rate'])
-        opt_disc = optim.Adam(models['disc'].parameters(), lr=config['learning_rate'])
+        opt_gen = optim.Adam(models['gen'].parameters(), lr=config['learning_rate'], betas=(config['beta1'], config['beta2']))
+        opt_disc = optim.Adam(models['disc'].parameters(), lr=config['learning_rate'], betas=(config['beta1'], config['beta2']))
         optimizers = {'opt_gen': opt_gen, 'opt_disc': opt_disc}
     else:
         raise ValueError("Your specified model does not exist (get_optimizers)")

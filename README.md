@@ -20,3 +20,13 @@ Some useful Links:
 1. Make file: `api_key.txt` and paste your google maps API key (static maps)
 2. Create necessary File Structure (See Setup with Training)
 3. Run: `python3 google_maps_data_generation.py`
+
+## Run
+Normal Run:
+```
+python3 train.py
+```
+For debugging:
+```
+CUDA_LAUNCH_BLOCKING=1 python3 train.py
+```

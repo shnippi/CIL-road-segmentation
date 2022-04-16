@@ -1,6 +1,7 @@
 import torch
 import wandb
 from tqdm import tqdm
+from torchvision import transforms
 
 def get_train_fn(config):
     if config['model'] == "base-u-net":
@@ -37,7 +38,17 @@ def unet_train_fn(models, loss_fn, optimizers, train_dataloader, epoch, device):
             tepoch.set_postfix(loss = loss_sum/(batch+1))
 
 
-def roadmap_gan_train_fn(models, loss_fn, optimizers, train_dataloader, epoch, config, device):
+def roadmap_gan_train_fn(
+        models, 
+        loss_fn, 
+        optimizers, 
+        train_dataloader, 
+        val_small_fn,
+        val_small_dataloader,
+        epoch, 
+        config, 
+        device):
+
     gen = models['gen']
     disc  =models['disc']
     opt_gen = optimizers['opt_gen']
@@ -87,3 +98,7 @@ def roadmap_gan_train_fn(models, loss_fn, optimizers, train_dataloader, epoch, c
             wandb.log({"loss-gen-fake": G_fake_loss})
             wandb.log({"loss-gen-l1": L1_loss})
             wandb.log({"loss-disc": D_loss})
+
+            # Some small ev
+            if batch % 100 == 0:
+                val_small_fn(models, loss_fn, val_small_dataloader, epoch, batch, config, device)

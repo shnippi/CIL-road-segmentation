@@ -15,6 +15,17 @@ def get_val_fn(config):
     
     return val_fn
 
+
+def get_val_small_fn(config):
+    if config['model'] == "base-u-net":
+        raise ValueError("Not implemented yet")
+    elif config['model'] == 'roadmap-gan':
+        val_fn = roadmap_gan_val_small_fn
+    else:
+        raise ValueError("Your specified model's training function does not exist")
+    
+    return val_fn
+
 def unet_val_fn(models, val_dataloader, epoch, config, device):
     model = models['model']
     # Check accuracy
@@ -28,9 +39,6 @@ def unet_val_fn(models, val_dataloader, epoch, config, device):
 def roadmap_gan_val_fn(models, loss_fn, val_dataloader, epoch, config, device):
     gen = models['gen']
     disc  =models['disc']
-
-    gen.train()
-    disc.train()
 
     l1 = torch.nn.L1Loss()
     loss_sum = 0
@@ -67,24 +75,57 @@ def roadmap_gan_val_fn(models, loss_fn, val_dataloader, epoch, config, device):
             wandb.log({"val-loss-gen-l1": L1_loss})
             wandb.log({"val-loss-disc": D_loss})
 
-            # Log first 10 images of each epoch
+            # Log first 4 images of each epoch
             if batch == 0:
-                num_batches = B_fake.shape[0]
+                num_samples = min(4,B_fake.shape[0])
                 caption = "epoch_" + str(epoch)
 
                 # Sattelite Images
-                image_tensors = [A[i] for i in range(num_batches)]
+                image_tensors = [A[i]*0.5+0.5 for i in range(num_samples)]
                 images = [transforms.ToPILImage()(image) for image in image_tensors]
-                wandb.log({"original": [wandb.Image(image, caption=caption) for image in images]})
+                wandb.log({"val-original": [wandb.Image(image, caption=caption) for image in images]})
 
                 # Real Roadmap images
-                image_tensors = [B[i] for i in range(num_batches)]
+                image_tensors = [B[i]*0.5+0.5 for i in range(num_samples)]
                 images = [transforms.ToPILImage()(image) for image in image_tensors]
-                wandb.log({"real": [wandb.Image(image, caption=caption) for image in images]})
+                wandb.log({"val-real": [wandb.Image(image, caption=caption) for image in images]})
 
                 # Generated Roadmap Examples
-                image_tensors = [B_fake[i] for i in range(num_batches)]
+                image_tensors = [B_fake[i]*0.5+0.5 for i in range(num_samples)]
                 images = [transforms.ToPILImage()(image) for image in image_tensors]
-                wandb.log({"generated": [wandb.Image(image, caption=caption) for image in images]})
+                wandb.log({"val-generated": [wandb.Image(image, caption=caption) for image in images]})
 
 
+def roadmap_gan_val_small_fn(models, loss_fn, val_dataloader, epoch, batch_nr, config, device):
+    gen = models['gen']
+    disc  =models['disc']
+
+    for batch, data in enumerate(val_dataloader):
+        if batch == 0:
+            # X:= Sattelite, Y:= Roadmap
+            A = data['A']
+            B = data['B']
+            A, B = A.to(device), B.to(device)
+
+            # Run Discriminator
+            B_fake = gen(A)
+
+            num_samples = min(4,B_fake.shape[0])
+            caption = "epoch_" + str(epoch) + "_batch_" + str(batch_nr)
+
+            # Sattelite Images
+            image_tensors = [A[i]*0.5+0.5 for i in range(num_samples)]
+            images = [transforms.ToPILImage()(image) for image in image_tensors]
+            wandb.log({"val-small-original": [wandb.Image(image, caption=caption) for image in images]})
+
+            # Real Roadmap images
+            image_tensors = [B[i]*0.5+0.5 for i in range(num_samples)]
+            images = [transforms.ToPILImage()(image) for image in image_tensors]
+            wandb.log({"vals-small-real": [wandb.Image(image, caption=caption) for image in images]})
+
+            # Generated Roadmap Examples
+            image_tensors = [B_fake[i]*0.5+0.5 for i in range(num_samples)]
+            images = [transforms.ToPILImage()(image) for image in image_tensors]
+            wandb.log({"val-small-generated": [wandb.Image(image, caption=caption) for image in images]})
+        else:
+            return

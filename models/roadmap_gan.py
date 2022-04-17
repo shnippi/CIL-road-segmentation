@@ -139,6 +139,7 @@ class CNNBlock(nn.Module):
         return self.conv(x)
 
 
+'''
 def test():
     x = torch.randn(1,3,512,512)
     model = Pix2Pix_Generator()
@@ -147,3 +148,4 @@ def test():
 
 if __name__ == "__main__":
     test()
+'''

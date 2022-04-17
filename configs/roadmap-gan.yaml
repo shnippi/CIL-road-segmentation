@@ -1,6 +1,7 @@
-debug: False
-wandb_logging: True
+debug: True
 
+wandb_logging: True
+device: 'cuda'
 
 model: "roadmap-gan"
 dataset: "PairedDataset"
@@ -9,8 +10,8 @@ root_B: "data/data-google/roadmaps"
 loss_function: "BCEWithLogitsLoss"
 
 load_from_checkpoint: False
-image_height: 512 # They are actually 400 (We upsample)
-image_width: 512 # They are actually 400 (We upsample)
+image_height: 256 # They are actually 400 (We upsample/downsample)
+image_width: 256 # They are actually 400 (We upsample/downsample)
 batch_size: 8
 num_workers: 12
 pin_memory: False

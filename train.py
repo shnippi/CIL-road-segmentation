@@ -28,7 +28,7 @@ def main():
 
     # Set seed and device
     set_seed(seed)
-    device = set_device()
+    device = set_device(config['device'])
 
     # Create Dataset and Dataloader
     train_dataloader, val_dataloader = get_dataloaders(config)

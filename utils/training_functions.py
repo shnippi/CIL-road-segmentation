@@ -1,7 +1,8 @@
 import torch
 import wandb
 from tqdm import tqdm
-from torchvision import transforms
+torch.autograd.set_detect_anomaly(True)
+torch.backends.cudnn.enabled = False
 
 def get_train_fn(config):
     if config['model'] == "base-u-net":
@@ -89,7 +90,7 @@ def roadmap_gan_train_fn(
             opt_gen.step()
             
             # Update Progressbar and log to wandb
-            loss_sum += G_loss.item() + D_loss.item()
+            loss_sum += float(G_loss.item()) + float(D_loss.item())
             tepoch.set_description(f"Epoch {epoch}")
             tepoch.set_postfix(loss = loss_sum/(batch+1))
             wandb.log({"epoch": epoch})

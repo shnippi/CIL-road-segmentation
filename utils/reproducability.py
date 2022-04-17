@@ -15,9 +15,12 @@ def set_seed(seed):
         torch.backends.cudnn.deterministic = True
 
 
-def set_device():
-    """Use GPU if available, otherwise cpu"""
+def set_device(device):
+    """Use GPU if available, otherwise cpu. Unless specified explicitly"""
+    if device != None:
+        device = device
+    else:
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"\nUsing device: {device}")
     return device

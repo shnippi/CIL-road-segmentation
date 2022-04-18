@@ -1,6 +1,8 @@
 import yaml
 import argparse
 import wandb
+import os
+import torch
 from utils.reproducability import set_seed, set_device
 from utils.data_handling import get_dataloaders, load_model, save_checkpoint
 from utils.loss_functions import get_loss_function
@@ -18,13 +20,17 @@ def main():
     epochs = config['epochs']
 
     # Wandb support
-    mode = "online" if (config['wandb_logging'] and not config['debug'])else "disabled"
+    mode = "online" if (config['wandb_logging']) else "disabled"
     wandb.init(
         project="cil-road-segmentation", 
         entity="davincis", 
         config=config, 
         mode=mode
     )
+
+    if config['debug']:
+        os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
+        torch.autograd.set_detect_anomaly(True)
 
     # Set seed and device
     set_seed(seed)

@@ -13,7 +13,7 @@ from utils.optimizers import get_optimizers
 def main():
     # Config arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config_path", default="configs/roadmap-gan.yaml")
+    parser.add_argument("--config_path", default="configs/original-pix2pix.yaml")
     args = parser.parse_args()
     config = yaml.safe_load(open(args.config_path, "r"))
     seed = config['seed']
@@ -54,7 +54,7 @@ def main():
     val_small_fn = get_val_small_fn(config)
 
     # Before we start training we validate our model for a first time
-    val_fn(models, loss_fn, val_dataloader, -1, config, device)
+    # val_fn(models, loss_fn, val_dataloader, -1, config, device)
 
     # Loop through the Epochs
     for epoch in range(epochs):
@@ -62,7 +62,7 @@ def main():
         train_fn(models, loss_fn, optimizers, train_dataloader, val_small_fn, val_dataloader, epoch, config, device)
 
         # save model
-        save_checkpoint(models, optimizers, config)
+        save_checkpoint(models, optimizers, config, epoch)
 
         # Validate the current models
         val_fn(models, loss_fn, val_dataloader, epoch, config, device)

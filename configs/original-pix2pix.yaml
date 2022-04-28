@@ -1,0 +1,25 @@
+
+debug: True
+wandb_logging: False
+
+device: 'cuda'
+
+model: "roadmap-gan"
+dataset: "OriginalPix2Pix"
+root_dir: "data/maps"
+loss_function: "BCEWithLogitsLoss"
+
+load_from_checkpoint: False
+image_height: 256 # They are actually 300 (We upsample/downsample)
+image_width: 256 # They are actually 300 (We upsample/downsample)
+batch_size: 16
+num_workers: 12
+pin_memory: False
+
+epochs: 200
+learning_rate: 0.0002
+beta1: 0.5
+beta2: 0.999
+l1_lambda: 100
+
+seed: 1234

@@ -2,6 +2,7 @@ import torch
 import wandb
 from dataset.map_dataset import MapDataset
 from dataset.paired_dataset import PairedDataset
+from dataset.original_pix2pix import OriginalPix2Pix
 from torch.utils.data import DataLoader
 from models.base_u_net import BASE_U_NET
 from models.roadmap_gan import Pix2Pix_Generator
@@ -16,7 +17,6 @@ def load_model(config, device):
         model = BASE_U_NET(in_channels=3, out_channels=1).to(device)
         models = {'unet': model}
         wandb.watch(models['unet'])
-        
     elif config['model'] == 'roadmap-gan':
         gen = Pix2Pix_Generator().to(device)
         disc = Pix2Pix_Descriminator().to(device)
@@ -32,7 +32,7 @@ def load_model(config, device):
     return models
     
 
-def save_checkpoint(models, optimizers, config):
+def save_checkpoint(models, optimizers, config, epoch):
     # TODO
     # Iterate through models and optimizers and save them
     return
@@ -72,6 +72,18 @@ def get_dataloaders(config):
         val_dataset = PairedDataset(
             root_A=config['root_A'],
             root_B=config['root_B'],
+            phase='val',
+            transform=val_transform
+        )
+    elif config['dataset'] == 'OriginalPix2Pix':
+        train_dataset = OriginalPix2Pix(
+            root_dir=config['root_dir'],
+            phase='train',
+            transform=train_transform
+        )
+
+        val_dataset = OriginalPix2Pix(
+            root_dir=config['root_dir'],
             phase='val',
             transform=val_transform
         )

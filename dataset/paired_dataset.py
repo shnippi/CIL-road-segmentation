@@ -7,12 +7,9 @@ class PairedDataset(Dataset):
     def __init__(self, root_A, root_B, phase, transform):
         """
         Args:
-            root_dir (string): Directory of the training data (subject already included)
+            root_dir (string): Directory of the training data
             phase (sting): Either "train" or "val"
         """
-
-        self.root_A = root_A
-        self.root_B = root_B
         self.transform = transform
 
         # List of all the image paths from A

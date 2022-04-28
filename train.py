@@ -63,7 +63,8 @@ def main():
         train_fn(models, loss_fn, optimizers, train_dataloader, val_small_fn, val_dataloader, epoch, config, device)
 
         # save model
-        save_checkpoint(models, optimizers, config, epoch)
+        if epoch % 5 == 0:
+            save_checkpoint(models, optimizers, config, epoch)
 
         # Validate the current models
         val_fn(models, loss_fn, val_dataloader, epoch, config, device)

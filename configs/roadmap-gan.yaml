@@ -1,25 +1,29 @@
-debug: True
 
-wandb_logging: True
-device: 'cuda'
+debug: True
+wandb_logging: False
+save_checkpoint: True
+
+load_from_checkpoint: False
 
 model: "roadmap-gan"
 dataset: "PairedDataset"
-root_A: "data/data-google/images"
-root_B: "data/data-google/roadmaps"
 loss_function: "BCEWithLogitsLoss"
 
-load_from_checkpoint: False
+root_A: "data/data-google/images"
+root_B: "data/data-google/roadmaps"
+checkpoint_root: "models/checkpoints"
+
 image_height: 256 # They are actually 400 (We upsample/downsample)
 image_width: 256 # They are actually 400 (We upsample/downsample)
 batch_size: 8
-num_workers: 12
-pin_memory: False
-
 epochs: 200
 learning_rate: 0.0001
 beta1: 0.5
 beta2: 0.999
 l1_lambda: 100
+
+device: 'cuda'
+num_workers: 12
+pin_memory: False
 
 seed: 1234

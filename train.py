@@ -27,6 +27,7 @@ def main():
         config=config, 
         mode=mode
     )
+    config['wandb_run_name'] = wandb.run.name
 
     if config['debug']:
         os.environ['CUDA_LAUNCH_BLOCKING'] = '1'

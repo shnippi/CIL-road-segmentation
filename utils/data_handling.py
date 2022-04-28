@@ -1,5 +1,6 @@
 import torch
 import wandb
+import os
 from dataset.map_dataset import MapDataset
 from dataset.paired_dataset import PairedDataset
 from dataset.original_pix2pix import OriginalPix2Pix
@@ -33,9 +34,24 @@ def load_model(config, device):
     
 
 def save_checkpoint(models, optimizers, config, epoch):
-    # TODO
+    # If we don't explicitly say that we want to save we skip
+    if not config['save_checkpoint']:
+        return
+
     # Iterate through models and optimizers and save them
-    return
+    directory = os.path.join(config['checkpoint_root'], config['wandb_run_name'])
+
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    
+    for model_name in  models:
+        filename =  'epoch_' + str(epoch) + '_' + model_name + '.pth.tar'
+        path = os.path.join(directory, filename)
+        checkpoint = {
+            "state_dict": models[model_name].state_dict(),
+            "optimizer": optimizers['opt_' + model_name].state_dict(),
+        }
+        torch.save(checkpoint, path)
 
 
 def load_checkpoint(checkpoint, model):

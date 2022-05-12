@@ -27,8 +27,7 @@ def load_model(config, device):
         raise ValueError("Your specified model does not exist")
 
     if config['load_from_checkpoint']:
-        print("Loading from checkpoint")
-        load_checkpoint(torch.load(config['checkpoint_path']), model)
+        models = load_checkpoint(config, models)
 
     return models
     
@@ -38,27 +37,55 @@ def save_checkpoint(models, optimizers, config, epoch):
     if not config['save_checkpoint']:
         return
 
-    # Iterate through models and optimizers and save them
+    # Create directiroy 
     directory = os.path.join(config['checkpoint_root'], config['wandb_run_name'])
-
     if not os.path.exists(directory):
         os.makedirs(directory)
     
-    for model_name in  models:
-        filename =  'epoch_' + str(epoch) + '_' + model_name + '.pth.tar'
+    if config['model'] == "base-u-net":
+        return
+    elif config['model'] == 'roadmap-gan':
+        # Save generator
+        filename =  'epoch_' + str(epoch) + '_' + config['model']+ '_gen' + '.pth.tar'
         path = os.path.join(directory, filename)
         checkpoint = {
-            "state_dict": models[model_name].state_dict(),
-            "optimizer": optimizers['opt_' + model_name].state_dict(),
+            "state_dict": models['gen'].state_dict(),
+            "optimizer": optimizers['opt_gen'].state_dict(),
         }
         torch.save(checkpoint, path)
 
+        # Save discriminator
+        filename =  'epoch_' + str(epoch) + '_' + config['model'] + '_disc' + '.pth.tar'
+        path = os.path.join(directory, filename)
+        checkpoint = {
+            "state_dict": models['disc'].state_dict(),
+            "optimizer": optimizers['opt_disc'].state_dict(),
+        }
+        torch.save(checkpoint, path)
+    else:
+        raise ValueError("Your specified model does not exist")
 
-def load_checkpoint(checkpoint, model):
-    # TODO
-    # Load from checkpoint files. Here we may need actually again thw switch statement with different logic
-    # for different models
-    return
+
+
+def load_checkpoint(config, models):
+    if config['model'] == "base-u-net":
+        return
+    elif config['model'] == 'roadmap-gan':
+        # Load generator
+        filename_gen =  'epoch_' + str(config['epoch_count']) + '_' +  config['model'] + '_gen' + '.pth.tar'
+        path_gen = os.path.join(config['checkpoint_load_pth'], filename_gen)
+        checkpoint = torch.load(path_gen, config['device'])
+        models['gen'].load_state_dict(checkpoint["state_dict"])
+
+        # Load discriminator
+        filename_disc =  'epoch_' + str(config['epoch_count']) + '_' +  config['model'] + '_disc' + '.pth.tar'
+        path_disc = os.path.join(config['checkpoint_load_pth'], filename_disc)
+        checkpoint = torch.load(path_disc, config['device'])
+        models['disc'].load_state_dict(checkpoint["state_dict"])
+    else:
+        raise ValueError("Your specified model does not exist")
+
+    return models
 
 
 def get_dataloaders(config):

@@ -9,6 +9,7 @@ from utils.loss_functions import get_loss_function
 from utils.training_functions import get_train_fn
 from utils.validation_functions import get_val_fn, get_val_small_fn
 from utils.optimizers import get_optimizers
+from utils.wandb import initialize
 
 def main():
     # Config arguments
@@ -20,14 +21,7 @@ def main():
     epochs = config['epochs']
 
     # Wandb support
-    mode = "online" if (config['wandb_logging']) else "disabled"
-    wandb.init(
-        project="cil-road-segmentation", 
-        entity="davincis", 
-        config=config, 
-        mode=mode
-    )
-    config['wandb_run_name'] = wandb.run.name
+    initialize(config)
 
     if config['debug']:
         os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
@@ -58,13 +52,12 @@ def main():
     # val_fn(models, loss_fn, val_dataloader, -1, config, device)
 
     # Loop through the Epochs
-    for epoch in range(epochs):
+    for epoch in range(config['epoch_count'], epochs):
         # Run through the epoch
         train_fn(models, loss_fn, optimizers, train_dataloader, val_small_fn, val_dataloader, epoch, config, device)
 
         # save model
-        if epoch % 5 == 0:
-            save_checkpoint(models, optimizers, config, epoch)
+        save_checkpoint(models, optimizers, config, epoch)
 
         # Validate the current models
         val_fn(models, loss_fn, val_dataloader, epoch, config, device)

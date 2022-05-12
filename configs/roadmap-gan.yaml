@@ -9,15 +9,15 @@ model: "roadmap-gan"
 dataset: "PairedDataset"
 loss_function: "BCEWithLogitsLoss"
 
-root_A: "data/data-google/images"
-root_B: "data/data-google/roadmaps"
+root_A: "data/maps/images"
+root_B: "data/maps/roadmaps"
 checkpoint_root: "models/checkpoints"
 
 image_height: 256 # They are actually 400 (We upsample/downsample)
 image_width: 256 # They are actually 400 (We upsample/downsample)
-batch_size: 8
+batch_size: 1
 epochs: 200
-learning_rate: 0.0001
+learning_rate: 0.0002
 beta1: 0.5
 beta2: 0.999
 l1_lambda: 100

@@ -8,8 +8,10 @@ from torchvision import transforms
 def get_val_fn(config):
     if config['model'] == "base-u-net":
         val_fn = unet_val_fn
-    elif config['model'] == 'roadmap-gan':
-        val_fn = roadmap_gan_val_fn
+    elif config['model'] == "pix2pix":
+        val_fn = pix2pix_val_fn
+    elif config['model'] == "pix2pixHD":
+        val_fn = pix2pix_val_fn
     else:
         raise ValueError("Your specified model's training function does not exist")
     
@@ -19,8 +21,10 @@ def get_val_fn(config):
 def get_val_small_fn(config):
     if config['model'] == "base-u-net":
         raise ValueError("Not implemented yet")
-    elif config['model'] == 'roadmap-gan':
-        val_fn = roadmap_gan_val_small_fn
+    elif config['model'] == 'pix2pix':
+        val_fn = pix2pix_val_small_fn
+    elif config['model'] == "pix2pixHD":
+        val_fn = pix2pix_val_small_fn
     else:
         raise ValueError("Your specified model's training function does not exist")
     
@@ -36,7 +40,7 @@ def unet_val_fn(models, val_dataloader, epoch, config, device):
     return
 
 
-def roadmap_gan_val_fn(models, loss_fn, val_dataloader, epoch, config, device):
+def pix2pix_val_fn(models, loss_fn, val_dataloader, epoch, config, device):
     gen = models['gen']
     disc  =models['disc']
 
@@ -85,15 +89,15 @@ def roadmap_gan_val_fn(models, loss_fn, val_dataloader, epoch, config, device):
                         
                     return
 
-def roadmap_gan_val_small_fn(models, loss_fn, val_dataloader, epoch, batch_nr, config, device):
+def pix2pix_val_small_fn(models, loss_fn, val_dataloader, epoch, batch_nr, config, device):
     gen = models['gen']
-    disc  =models['disc']
+    disc = models['disc']
     with torch.no_grad():
         for batch, data in enumerate(val_dataloader):
             if batch == 0:
                 # X:= Sattelite, Y:= Roadmap
                 A = data['A']
-                B = data['B']
+                B = data['B']s
                 A, B = A.to(device), B.to(device)
 
                 # Run Discriminator

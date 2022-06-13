@@ -114,3 +114,81 @@ class BlockUp(nn.Module):
         x = self.norm1(x)
         x = self.act1(x)
         return x
+
+
+
+class Pix2PixHD_Descriminator(nn.Module):
+    def __init__(self, in_channles=6, ndf=64, n_layers=3, norm_layer=nn.BatchNorm2d, num_D=3):
+        super(Pix2PixHD_Descriminator, self).__init__()
+
+        self.descriminators = []
+        for i in range(n_layers):
+            # We actually need num_D different Desciminators even though they have the exact
+            # same architecure. But they all will get a differentely scaled input image. D1 should
+            # learn somthing different than D2. Hence they also need to have different weights.
+            self.descriminators.append(
+                NLayer_Descriminator(in_channles, ndf, n_layers, norm_layer)
+            )
+        
+        self.downsample = nn.AvgPool2d(3, stride=2, padding=[1, 1], count_include_pad=False)
+
+
+    def forward(self, x):
+        # TODO
+        return
+
+
+
+
+class NLayer_Descriminator(nn.Module):
+    # PatchGAN descriminator
+    def __init__(self, input_nc, ndf=64, n_layers=3, norm_layer=nn.BatchNorm2d):
+        super(NLayerDiscriminator, self).__init__()
+
+        kernel_size = 4
+        padw = int(np.ceil((kernel_size-1.0)/2))
+
+        # Inital Conv layer
+        self.conv1 = nn.Conv2d(input_nc, ndf, kernel_size=kw, stride=2, padding=padw)
+        self.act1  = nn.LeakyReLU(0.2)
+
+        # Other layers (stirde=2)
+        nf = ndf
+        self.descriminator_layers = nn.ModuleList()
+        for i in range(1, n_layers):
+            in_channels = nf
+            nf = min(nf * 2, 512)
+            descriminator_layer = DescriminatorLayer(in_channels, nf, kernel_size, 2, padw, norm_layer)
+            self.descriminator_layers.append(descriminator_layer)   
+
+        # Last Layer (stride=1)
+        in_channels = nf
+        nf = min(nf * 2, 512)
+        self.desc_layer_last = DescriminatorLayer(in_channels, nf, kernel_size, 1, padw, norm_layer)
+
+        # End layer
+        self.conv2 = nn.Conv2d(nf, 1, kernel_size=kw, stride=1, padding=padw)
+
+    def forward(self, x):
+        x = self.conv1(x)
+        x = self.act1(x)
+        x = self.descriminator_layers(x)
+        x = self.desc_layer_last(x)
+        x = self.conv2(x)
+
+        return x
+
+
+class DescriminatorLayer(nn.Module):
+    def __init__(self, in_channels, out_channels, kernel_size, stride, padw, norm_layer):
+        super().__init__()
+        
+        self.conv = nn.Conv2d(in_channels, out_channels, kernel_size=kernel_size, stride=stride, padding=padw)
+        self.norm = norm_layer(out_channels)
+        self.act = nn.LeakyReLU(0.2)
+
+    def forward(self, x):
+        x = self.conv(x)
+        x = self.norm(x)
+        x = self.act(x)
+        return x

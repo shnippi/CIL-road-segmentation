@@ -1,14 +1,16 @@
 import torch
 import wandb
 import os
+from utils.transformations import get_transforms
 from dataset.map_dataset import MapDataset
 from dataset.paired_dataset import PairedDataset
 from dataset.original_pix2pix import OriginalPix2Pix
 from torch.utils.data import DataLoader
 from models.base_u_net import BASE_U_NET
-from models.roadmap_gan import Pix2Pix_Generator
-from models.roadmap_gan import Pix2Pix_Descriminator
-from utils.transformations import get_transforms
+from models.pix2pix import Pix2Pix_Generator
+from models.pix2pix import Pix2Pix_Descriminator
+from models.pix2pixHD import Pix2PixHD_Generator
+from models.pix2pixHD import Pix2PixHD_Descriminator
 
 def load_model(config, device):
     '''
@@ -18,9 +20,14 @@ def load_model(config, device):
         model = BASE_U_NET(in_channels=3, out_channels=1).to(device)
         models = {'unet': model}
         wandb.watch(models['unet'])
-    elif config['model'] == 'roadmap-gan':
+    elif config['model'] == 'pix2pix':
         gen = Pix2Pix_Generator().to(device)
         disc = Pix2Pix_Descriminator().to(device)
+        models = {'gen': gen, 'disc': disc}
+        wandb.watch((models['gen'], models['disc']))
+    elif config['model'] == 'pix2pixHD':
+        gen = Pix2PixHD_Generator().to(device)
+        disc = Pix2PixHD_Descriminator().to(device)
         models = {'gen': gen, 'disc': disc}
         wandb.watch((models['gen'], models['disc']))
     else:
@@ -44,7 +51,7 @@ def save_checkpoint(models, optimizers, config, epoch):
     
     if config['model'] == "base-u-net":
         return
-    elif config['model'] == 'roadmap-gan':
+    elif config['model'] in ['pix2pix', 'pix2pix']:
         # Save generator
         filename =  'epoch_' + str(epoch) + '_' + config['model']+ '_gen' + '.pth.tar'
         path = os.path.join(directory, filename)
@@ -70,7 +77,7 @@ def save_checkpoint(models, optimizers, config, epoch):
 def load_checkpoint(config, models):
     if config['model'] == "base-u-net":
         return
-    elif config['model'] == 'roadmap-gan':
+    elif config['model'] in ['pix2pix', 'pix2pixHD']:
         # Load generator
         filename_gen =  'epoch_' + str(config['epoch_count']) + '_' +  config['model'] + '_gen' + '.pth.tar'
         path_gen = os.path.join(config['checkpoint_load_pth'], filename_gen)

@@ -1,4 +1,5 @@
 import torch.nn as nn
+import numpy as np
 
 class Pix2PixHD_Generator(nn.Module):
     def __init__(self, in_channles=3, out_channles=3, ngf=64, norm_layer=nn.BatchNorm2d, n_downsampling=3, n_resblocks=9):
@@ -120,9 +121,11 @@ class BlockUp(nn.Module):
 class Pix2PixHD_Descriminator(nn.Module):
     def __init__(self, in_channles=6, ndf=64, n_layers=3, norm_layer=nn.BatchNorm2d, num_D=3):
         super(Pix2PixHD_Descriminator, self).__init__()
-
+        
+        self.num_D = num_D
+        self.n_layers = n_layers
         self.descriminators = []
-        for i in range(n_layers):
+        for i in range(num_D):
             # We actually need num_D different Desciminators even though they have the exact
             # same architecure. But they all will get a differentely scaled input image. D1 should
             # learn somthing different than D2. Hence they also need to have different weights.
@@ -134,8 +137,21 @@ class Pix2PixHD_Descriminator(nn.Module):
 
 
     def forward(self, x):
-        # TODO
-        return
+        result = []
+
+        for i in range(self.num_D):
+            # Since we save all intermediate features for the feature matching loss we need
+            # to also save them. Therefore features_resolution_i gets a list of all these features
+            # where the last entry is the feature map which we pass to the next layer
+            features_resolution_i = self.descriminators[i].forward(x)
+            result.append(features_resolution_i)
+            x = features_resolution_i[-1]
+            
+            # In the last layer we don't need to downsample anymore (unncessary computation)
+            if i != self.num_D-1:
+                x = self.downsample(x)
+
+        return result
 
 
 
@@ -143,40 +159,55 @@ class Pix2PixHD_Descriminator(nn.Module):
 class NLayer_Descriminator(nn.Module):
     # PatchGAN descriminator
     def __init__(self, input_nc, ndf=64, n_layers=3, norm_layer=nn.BatchNorm2d):
-        super(NLayerDiscriminator, self).__init__()
+        super(NLayer_Descriminator, self).__init__()
 
         kernel_size = 4
         padw = int(np.ceil((kernel_size-1.0)/2))
 
         # Inital Conv layer
-        self.conv1 = nn.Conv2d(input_nc, ndf, kernel_size=kw, stride=2, padding=padw)
+        self.conv1 = nn.Conv2d(input_nc, ndf, kernel_size=kernel_size, stride=2, padding=padw)
         self.act1  = nn.LeakyReLU(0.2)
 
         # Other layers (stirde=2)
         nf = ndf
-        self.descriminator_layers = nn.ModuleList()
+        self.descriminator_layers = []
         for i in range(1, n_layers):
             in_channels = nf
             nf = min(nf * 2, 512)
             descriminator_layer = DescriminatorLayer(in_channels, nf, kernel_size, 2, padw, norm_layer)
             self.descriminator_layers.append(descriminator_layer)   
 
-        # Last Layer (stride=1)
+        # Stride=1 Layer
         in_channels = nf
         nf = min(nf * 2, 512)
-        self.desc_layer_last = DescriminatorLayer(in_channels, nf, kernel_size, 1, padw, norm_layer)
+        self.stride_layer = DescriminatorLayer(in_channels, nf, kernel_size, 1, padw, norm_layer)
 
-        # End layer
-        self.conv2 = nn.Conv2d(nf, 1, kernel_size=kw, stride=1, padding=padw)
+        # Last layer
+        self.conv2 = nn.Conv2d(nf, 1, kernel_size=kernel_size, stride=1, padding=padw)
 
     def forward(self, x):
+        # We need to save intermediate feature for the feature matching loss
+        result = []
+
+        # First layer
         x = self.conv1(x)
         x = self.act1(x)
-        x = self.descriminator_layers(x)
-        x = self.desc_layer_last(x)
-        x = self.conv2(x)
+        result.append(x)
 
-        return x
+        # The different blocks
+        for i in range(len(self.descriminator_layers)):
+            x = self.descriminator_layers[i].forward(x)
+            result.append(x)
+
+        # Stride layer
+        x = self.stride_layer(x)
+        result.append(x)
+
+        # Last layer
+        x = self.conv2(x)
+        result.append(x)
+
+        return result
 
 
 class DescriminatorLayer(nn.Module):

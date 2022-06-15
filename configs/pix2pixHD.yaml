@@ -7,7 +7,7 @@ epoch_count: 0
 
 model: "pix2pixHD"
 dataset: "PairedDataset" # PairedDataset, OriginalPix2Pix
-loss_function: "BCEWithLogitsLoss"
+loss_function: "BCEWithLogitsLossOverList"
 
 root_dir: "data/google"
 checkpoint_root: "models/checkpoints"

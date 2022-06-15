@@ -51,7 +51,25 @@ def save_checkpoint(models, optimizers, config, epoch):
     
     if config['model'] == "base-u-net":
         return
-    elif config['model'] in ['pix2pix', 'pix2pix']:
+    elif config['model'] == 'pix2pix':
+        # Save generator
+        filename =  'epoch_' + str(epoch) + '_' + config['model']+ '_gen' + '.pth.tar'
+        path = os.path.join(directory, filename)
+        checkpoint = {
+            "state_dict": models['gen'].state_dict(),
+            "optimizer": optimizers['opt_gen'].state_dict(),
+        }
+        torch.save(checkpoint, path)
+
+        # Save discriminator
+        filename =  'epoch_' + str(epoch) + '_' + config['model'] + '_disc' + '.pth.tar'
+        path = os.path.join(directory, filename)
+        checkpoint = {
+            "state_dict": models['disc'].state_dict(),
+            "optimizer": optimizers['opt_disc'].state_dict(),
+        }
+        torch.save(checkpoint, path)
+    elif config['model'] == 'pix2pixHD':
         # Save generator
         filename =  'epoch_' + str(epoch) + '_' + config['model']+ '_gen' + '.pth.tar'
         path = os.path.join(directory, filename)
@@ -157,3 +175,4 @@ def get_dataloaders(config):
     )
 
     return train_dataloader, val_dataloader
+

@@ -9,7 +9,9 @@ Some useful Links:
 ## Setup (With Training)
 1. Download datasets
 2. Create the following data-file structure and save your data into the folders: <br>
-<img src="images/data-structure.png" height=220px>
+    <img src="images/data-structure.png" height=220px>
+3. Run the dataset_generation/roadmap_to_mask.py file (to create the masks)
+4. Delete all sattelite-roadmap-map triplets where the mask has no pixel white. 
 
 
 ## Setup (Only Inference)

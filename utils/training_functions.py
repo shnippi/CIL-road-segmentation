@@ -135,66 +135,63 @@ def pix2pixHD_train_fn(
     loss_sum = 0
 
     with tqdm(train_dataloader) as tepoch:
-        try:
-            for batch, data in enumerate(tepoch):
-                # A:= Sattelite, B:= Roadmap
-                sattelite = data['A']
-                roadmap = data['B']
-                sattelite, roadmap = sattelite.to(device), roadmap.to(device)
+        for batch, data in enumerate(tepoch):
+            # A:= Sattelite, B:= Roadmap
+            sattelite = data['A']
+            roadmap = data['B']
+            sattelite, roadmap = sattelite.to(device), roadmap.to(device)
 
-                # Generate fake roadmap
-                roadmap_fake = gen(sattelite)
+            # Generate fake roadmap
+            roadmap_fake = gen(sattelite)
 
-                # Descriminator fake loss
-                input_concat = torch.cat((roadmap, roadmap_fake.detach()), dim=1)
-                D_fake = disc(input_concat)
-                D_fake_loss = loss_fn(D_fake, False)
+            # Descriminator fake loss
+            input_concat = torch.cat((roadmap, roadmap_fake.detach()), dim=1)
+            D_fake = disc(input_concat)
+            D_fake_loss = loss_fn(D_fake, False)
 
-                # Descriminator real loss
-                input_concat = torch.cat((roadmap, roadmap.detach()), dim=1)
-                D_real = disc(input_concat)
-                D_real_loss = loss_fn(D_real, True)
+            # Descriminator real loss
+            input_concat = torch.cat((roadmap, roadmap.detach()), dim=1)
+            D_real = disc(input_concat)
+            D_real_loss = loss_fn(D_real, True)
 
-                # GAN loss (Here we don't detach())
-                input_concat = torch.cat((roadmap, roadmap_fake), dim=1)
-                D_fake_undetached = disc(input_concat)
-                G_loss = loss_fn(D_fake_undetached, True)
+            # GAN loss (Here we don't detach())
+            input_concat = torch.cat((roadmap, roadmap_fake), dim=1)
+            D_fake_undetached = disc(input_concat)
+            G_loss = loss_fn(D_fake_undetached, True)
 
-                # Feature Matching loss
-                loss_G_GAN_Feat = 0
-                feat_weights = 4.0 / (disc.n_layers + 1)
-                D_weights = 1.0 / disc.opt.num_D
-                for i in range(disc.opt.num_D):
-                    for j in range(len(D_fake_undetached[i])-1):
-                        loss_G_GAN_Feat += D_weights * feat_weights * \
-                            l1(D_fake_undetached[i][j], D_real[i][j].detach()) * 10
+            # Feature Matching loss
+            loss_G_GAN_Feat = 0
+            feat_weights = 4.0 / (disc.n_layers + 1)
+            D_weights = 1.0 / disc.num_D
+            for i in range(disc.num_D):
+                for j in range(len(D_fake_undetached[i])-1):
+                    loss_G_GAN_Feat += D_weights * feat_weights * \
+                        l1(D_fake_undetached[i][j], D_real[i][j].detach()) * 10
 
-                # Final losses
-                loss_D = (D_fake_loss + D_real_loss)*0.5
-                loss_G = G_loss + loss_G_GAN_Feat
+            # Final losses
+            loss_D = (D_fake_loss + D_real_loss)*0.5
+            loss_G = G_loss + loss_G_GAN_Feat
 
-                # Backward Pass and update parameters
-                opt_gen.zero_grad()
-                loss_G.backward()
-                opt_gen.step()
+            # Backward Pass and update parameters
+            opt_gen.zero_grad()
+            loss_G.backward()
+            opt_gen.step()
 
-                opt_disc.zero_grad()
-                loss_D.backward()
-                opt_disc.step()
+            opt_disc.zero_grad()
+            loss_D.backward()
+            opt_disc.step()
 
-                
-                # Update Progressbar and log to wandb
-                loss_sum += float(G_loss.item()) + float(loss_D.item())
-                tepoch.set_description(f"Epoch {epoch}")
-                tepoch.set_postfix(loss = loss_sum/(batch+1))
-                wandb.log({"epoch": epoch})
-                wandb.log({"loss": loss_sum/(batch+1)})
-                wandb.log({"loss-gen": loss_G})
-                wandb.log({"loss-disc": loss_D})
+            
+            # Update Progressbar and log to wandb
+            loss_sum += float(G_loss.item()) + float(loss_D.item())
+            tepoch.set_description(f"Epoch {epoch}")
+            tepoch.set_postfix(loss = loss_sum/(batch+1))
+            wandb.log({"epoch": epoch})
+            wandb.log({"loss": loss_sum/(batch+1)})
+            wandb.log({"loss-gen": loss_G})
+            wandb.log({"loss-disc": loss_D})
 
-                # Some small ev
-                # if batch % 1000 == 0:
-                #    val_small_fn(models, loss_fn, val_small_dataloader, epoch, batch, config, device)
-        except:
-            print("Error occured")
+            # Some small ev
+            # if batch % 1000 == 0:
+            #    val_small_fn(models, loss_fn, val_small_dataloader, epoch, batch, config, device)
 

@@ -9,7 +9,9 @@ model: "pix2pixHD"
 dataset: "PairedDataset" # PairedDataset, OriginalPix2Pix
 loss_function: "BCEWithLogitsLossOverList"
 
-root_dir: "data/google"
+root_A: "data/google/images"
+root_B: "data/google/roadmaps"
+
 checkpoint_root: "models/checkpoints"
 checkpoint_load_pth: "models/checkpoints/sparkling-field-39"
 
@@ -23,6 +25,6 @@ beta2: 0.999
 l1_lambda: 100
 device: 'cuda'
 num_workers: 12
-pin_memory: False
+pin_memory: True
 
 seed: 1234

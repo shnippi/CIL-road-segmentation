@@ -14,7 +14,7 @@ from utils.wandb import initialize
 def main():
     # Config arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config_path", default="configs/original-pix2pix.yaml")
+    parser.add_argument("--config_path", default="configs/pix2pixHD.yaml")
     args = parser.parse_args()
     config = yaml.safe_load(open(args.config_path, "r"))
     seed = config['seed']
@@ -38,7 +38,7 @@ def main():
     models = load_model(config, device)
     
     # Get Loss function
-    loss_fn = get_loss_function(config['loss_function'])
+    loss_fn = get_loss_function(config)
 
     # Set optimizer
     optimizers = get_optimizers(models, config)

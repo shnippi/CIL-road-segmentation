@@ -3,11 +3,12 @@ import torch
 from torch.autograd import Variable
 
 
-def get_loss_function(loss_fn):
-    if loss_fn == 'BCEWithLogitsLoss':
+def get_loss_function(config):
+    loss_fn_name = config['loss_function']
+    if loss_fn_name == 'BCEWithLogitsLoss':
         return BCEWithLogitsLoss()
-    elif loss_fn == 'BCEWithLogitsLossOverList':
-        return GANLoss()
+    elif loss_fn_name == 'BCEWithLogitsLossOverList':
+        return GANLoss(config)
     else:
         raise ValueError("Your specified loss does not exist.")
 
@@ -16,14 +17,13 @@ def BCEWithLogitsLoss():
 
 
 class GANLoss(nn.Module):
-    def __init__(self, use_lsgan=False, target_real_label=1.0, target_fake_label=0.0,
-                 tensor=torch.FloatTensor):
+    def __init__(self, config, use_lsgan=False, target_real_label=1.0, target_fake_label=0.0):
         super(GANLoss, self).__init__()
         self.real_label = target_real_label
         self.fake_label = target_fake_label
         self.real_label_var = None
         self.fake_label_var = None
-        self.Tensor = tensor
+        self.Tensor = torch.cuda.FloatTensor if config['device']=='cuda' else torch.Tensor
         if use_lsgan:
             self.loss = nn.MSELoss()
         else:

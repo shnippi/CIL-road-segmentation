@@ -97,7 +97,7 @@ def pix2pix_val_small_fn(models, loss_fn, val_dataloader, epoch, batch_nr, confi
             if batch == 0:
                 # X:= Sattelite, Y:= Roadmap
                 A = data['A']
-                B = data['B']s
+                B = data['B']
                 A, B = A.to(device), B.to(device)
 
                 # Run Discriminator

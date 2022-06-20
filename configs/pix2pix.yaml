@@ -9,8 +9,8 @@ model: "pix2pix"
 dataset: "PairedDataset"
 loss_function: "BCEWithLogitsLoss"
 
-root_A: "data/maps/images"
-root_B: "data/maps/roadmaps"
+root_A: "data/google/images"
+root_B: "data/google/roadmaps"
 checkpoint_root: "models/checkpoints"
 
 image_height: 256 # They are actually 400 (We upsample/downsample)

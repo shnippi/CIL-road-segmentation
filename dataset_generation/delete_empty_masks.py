@@ -1,0 +1,40 @@
+import os
+from PIL import Image
+
+
+def main():
+    # open method used to open different extension image file
+    k = 0
+    for i in range(0,20):
+        directory = "data/google/masks/{0}".format(str(i))
+        for filename in os.listdir(directory):
+            f = os.path.join(directory, filename)
+            # checking if it is a file
+            if os.path.isfile(f):
+                
+                mask = Image.open(f)
+                num_white_pixels = _count_nonblack_pil(mask)
+            
+                # Delete if not enough pixels that are white
+                if num_white_pixels < 200:
+                    print(f)
+
+
+                
+
+def _count_nonblack_pil(img):
+    """Return the number of pixels in img that are not black.
+    img must be a PIL.Image object in mode RGB.
+
+    """
+    bbox = img.getbbox()
+    if not bbox: return 0
+    return sum(img.crop(bbox)
+               .point(lambda x: 255 if x else 0)
+               .convert("L")
+               .point(bool)
+               .getdata())
+
+
+if __name__ == "__main__":
+    main()

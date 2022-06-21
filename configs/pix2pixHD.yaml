@@ -1,6 +1,6 @@
 
 debug: True
-wandb_logging: False
+wandb_logging: True
 save_checkpoint: True
 load_from_checkpoint: False
 epoch_count: 0

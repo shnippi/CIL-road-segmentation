@@ -49,7 +49,7 @@ def main():
     val_small_fn = get_val_small_fn(config)
 
     # Before we start training we validate our model for a first time
-    # val_fn(models, loss_fn, val_dataloader, -1, config, device)
+    val_fn(models, loss_fn, val_dataloader, -1, config, device)
 
     # Loop through the Epochs
     for epoch in range(config['epoch_count'], epochs):

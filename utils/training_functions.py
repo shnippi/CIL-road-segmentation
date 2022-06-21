@@ -192,6 +192,6 @@ def pix2pixHD_train_fn(
             wandb.log({"loss-disc": loss_D})
 
             # Some small ev
-            # if batch % 1000 == 0:
-            #    val_small_fn(models, loss_fn, val_small_dataloader, epoch, batch, config, device)
+            if batch % 500 == 0:
+                val_small_fn(models, loss_fn, val_small_dataloader, epoch, batch, config, device)
 

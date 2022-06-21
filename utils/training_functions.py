@@ -177,9 +177,10 @@ def pix2pixHD_train_fn(
             loss_G.backward()
             opt_gen.step()
 
-            opt_disc.zero_grad()
-            loss_D.backward()
-            opt_disc.step()
+            if batch%10 == 0:
+                opt_disc.zero_grad()
+                loss_D.backward()
+                opt_disc.step()
 
             
             # Update Progressbar and log to wandb
@@ -192,6 +193,6 @@ def pix2pixHD_train_fn(
             wandb.log({"loss-disc": loss_D})
 
             # Some small ev
-            if batch % 500 == 0:
+            if batch % 50 == 0:
                 val_small_fn(models, loss_fn, val_small_dataloader, epoch, batch, config, device)
 

@@ -22,7 +22,6 @@ epochs: 200
 learning_rate: 0.0002
 beta1: 0.5
 beta2: 0.999
-l1_lambda: 100
 device: 'cuda'
 num_workers: 12
 pin_memory: True

@@ -239,16 +239,22 @@ class DescriminatorLayer(nn.Module):
         return x
 
 
+def count_parameters(model):
+    return sum(p.numel() for p in model.parameters() if p.requires_grad)
+
+
 
 import torch 
 def test_gen():
     x = torch.randn(1,3,512,512)
     model = Pix2PixHD_Generator()
+    print(count_parameters(model))
     preds = model(x)
 
 def test_disc():
     x = torch.randn(1,6,512,512)
     model = Pix2PixHD_Descriminator()
+    print(count_parameters(model))
     preds = model(x)
 
 if __name__ == "__main__":

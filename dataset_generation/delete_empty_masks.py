@@ -6,6 +6,7 @@ def main():
     # open method used to open different extension image file
     k = 0
     for i in range(0,20):
+        print("Starting directroy: ", i)
         directory = "data/google/masks/{0}".format(str(i))
         for filename in os.listdir(directory):
             f = os.path.join(directory, filename)
@@ -17,9 +18,15 @@ def main():
             
                 # Delete if not enough pixels that are white
                 if num_white_pixels < 200:
-                    print(f)
+                    name = os.path.basename(f)
 
+                    path_masks = f
+                    path_roadmap = "data/google/roadmaps/{0}/".format(str(i)) + name
+                    path_images = "data/google/images/{0}/".format(str(i)) + name
 
+                    os.remove(path_masks)
+                    os.remove(path_roadmap)
+                    os.remove(path_images)
                 
 
 def _count_nonblack_pil(img):

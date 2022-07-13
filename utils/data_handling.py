@@ -102,11 +102,12 @@ def load_checkpoint(config, models):
         checkpoint = torch.load(path_gen, config['device'])
         models['gen'].load_state_dict(checkpoint["state_dict"])
 
-        # Load discriminator
-        filename_disc =  'epoch_' + str(config['epoch_count']) + '_' +  config['model'] + '_disc' + '.pth.tar'
-        path_disc = os.path.join(config['checkpoint_load_pth'], filename_disc)
-        checkpoint = torch.load(path_disc, config['device'])
-        models['disc'].load_state_dict(checkpoint["state_dict"])
+        if config['mode'] == "train":
+            # Load discriminator
+            filename_disc =  'epoch_' + str(config['epoch_count']) + '_' +  config['model'] + '_disc' + '.pth.tar'
+            path_disc = os.path.join(config['checkpoint_load_pth'], filename_disc)
+            checkpoint = torch.load(path_disc, config['device'])
+            models['disc'].load_state_dict(checkpoint["state_dict"])
     else:
         raise ValueError("Your specified model does not exist")
 
@@ -129,6 +130,13 @@ def get_dataloaders(config):
             mask_dir=config['val_maskdir'],
             transform=val_transform,
         )
+
+        test_dataset = MapDataset(
+            image_dir=config['test_dir'],
+            mask_dir=None,
+            transform=val_transform,
+        )
+
     elif config['dataset'] == 'PairedDataset':
         train_dataset = PairedDataset(
             root_A=config['root_A'],
@@ -143,6 +151,14 @@ def get_dataloaders(config):
             phase='val',
             transform=val_transform
         )
+
+        test_dataset = PairedDataset(
+            root_A=config['root_A'],
+            root_B=config['root_B'],
+            phase='test',
+            transform=val_transform
+        )
+
     elif config['dataset'] == 'OriginalPix2Pix':
         train_dataset = OriginalPix2Pix(
             root_dir=config['root_dir'],
@@ -153,6 +169,12 @@ def get_dataloaders(config):
         val_dataset = OriginalPix2Pix(
             root_dir=config['root_dir'],
             phase='val',
+            transform=val_transform
+        )
+
+        test_dataset = OriginalPix2Pix(
+            root_dir=config['root_dir'],
+            phase='test',
             transform=val_transform
         )
     else:
@@ -174,5 +196,12 @@ def get_dataloaders(config):
         shuffle=False,
     )
 
-    return train_dataloader, val_dataloader
+    test_dataloader = DataLoader(
+        test_dataset,
+        batch_size=config['batch_size'],
+        num_workers=config['num_workers'],
+        pin_memory=config['pin_memory'],
+        shuffle=False,
+    )
 
+    return train_dataloader, val_dataloader, test_dataloader

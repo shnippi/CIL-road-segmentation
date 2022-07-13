@@ -14,7 +14,7 @@ from utils.wandb import initialize
 def main():
     # Config arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config_path", default="configs/pix2pixHD.yaml")
+    parser.add_argument("--config_path", default="configs/pix2pix.yaml")
     args = parser.parse_args()
     config = yaml.safe_load(open(args.config_path, "r"))
     seed = config['seed']
@@ -32,7 +32,7 @@ def main():
     device = set_device(config['device'])
 
     # Create Dataset and Dataloader
-    train_dataloader, val_dataloader = get_dataloaders(config)
+    train_dataloader, val_dataloader, _ = get_dataloaders(config)
 
     # Load model (Takes also care of: Continue training from checkpoint)
     models = load_model(config, device)

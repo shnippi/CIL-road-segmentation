@@ -6,3 +6,4 @@ api_key.txt
 */__pycache__
 /wandb
 *.pth.tar
+*.png

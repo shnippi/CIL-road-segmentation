@@ -33,25 +33,25 @@ def load_checkpoint(config, optimizers):
         return
     elif config['model'] == 'pix2pix':
         # Load generator
-        filename_gen =  'epoch_' + str(config['epoch_count']) + '_' + 'gen' + '.pth.tar'
+        filename_gen =  'epoch_' + str(config['epoch_count']) + '_' + config['model'] + '_gen' + '.pth.tar'
         path_gen = os.path.join(config['checkpoint_load_pth'], filename_gen)
         checkpoint = torch.load(path_gen, config['device'])
         optimizers['opt_gen'].load_state_dict(checkpoint["optimizer"])
 
         # Load discriminator
-        filename_disc =  'epoch_' + str(config['epoch_count']) + '_' + 'disc' + '.pth.tar'
+        filename_disc =  'epoch_' + str(config['epoch_count']) + '_' + config['model'] + '_disc' + '.pth.tar'
         path_disc = os.path.join(config['checkpoint_load_pth'], filename_disc)
         checkpoint = torch.load(path_disc, config['device'])
         optimizers['opt_disc'].load_state_dict(checkpoint["optimizer"])
     elif config['model'] == 'pix2pixHD':
         # Load generator
-        filename_gen =  'epoch_' + str(config['epoch_count']) + '_' + 'gen' + '.pth.tar'
+        filename_gen =  'epoch_' + str(config['epoch_count']) + '_' + config['model'] + '_gen' + '.pth.tar'
         path_gen = os.path.join(config['checkpoint_load_pth'], filename_gen)
         checkpoint = torch.load(path_gen, config['device'])
         optimizers['opt_gen'].load_state_dict(checkpoint["optimizer"])
 
         # Load discriminator
-        filename_disc =  'epoch_' + str(config['epoch_count']) + '_' + 'disc' + '.pth.tar'
+        filename_disc =  'epoch_' + str(config['epoch_count']) + '_' + config['model'] + '_disc' + '.pth.tar'
         path_disc = os.path.join(config['checkpoint_load_pth'], filename_disc)
         checkpoint = torch.load(path_disc, config['device'])
         optimizers['opt_disc'].load_state_dict(checkpoint["optimizer"])

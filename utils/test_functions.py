@@ -39,8 +39,8 @@ def pix2pix_test_fn(
             B_fake = gen(A)
             
             pil_img = trans_tensToPil(B_fake.squeeze())
-            #pil_img = pil_img.resize((400, 400))
+            pil_img = pil_img.resize((400, 400))
 
-            path = "results/" + str(count) + ".png"
+            path = "results/roadmaps/" + str(count) + ".png"
             pil_img.save(path)
             count += 1

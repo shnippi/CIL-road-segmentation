@@ -4,6 +4,7 @@ import os
 import numpy as np
 import re
 import PIL
+from PIL import Image
 
 from absl import app, flags
 
@@ -12,7 +13,7 @@ FLAGS = flags.FLAGS
 flags.DEFINE_string(
     "submission_filename", "dummy_submission.csv", "The output csv for the submission.")
 flags.DEFINE_string(
-    "base_dir", "training/groundtruth", "The directory with the predicted masks.")
+    "base_dir", "results/masks", "The directory with the predicted masks.")
 
 foreground_threshold = 0.25 # percentage of pixels of val 255 required to assign a foreground label to a patch
 
@@ -29,6 +30,7 @@ def patch_to_label(patch):
 def mask_to_submission_strings(image_filename, mask_dir=None):
     """Reads a single image and outputs the strings that should go into the submission file"""
     img_number = int(re.search(r"\d+", image_filename).group(0))
+    print(img_number)
     im = PIL.Image.open(image_filename)
     im_arr = np.asarray(im)
     if len(im_arr.shape) > 2:

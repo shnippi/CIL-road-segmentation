@@ -15,6 +15,7 @@ def main():
     config = yaml.safe_load(open(args.config_path, "r"))
     seed = config['seed']
 
+
     # Wandb support
     initialize(config)
 
@@ -37,7 +38,6 @@ def main():
 
     # Do the actual testing
     test_fn(models, test_dataloader, config, device)
-
 
 
 if __name__ == "__main__":

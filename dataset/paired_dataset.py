@@ -24,10 +24,10 @@ class PairedDataset(Dataset):
         item_A = self.paths_A[idx]
         item_B = self.paths_B[idx]
 
-        #image_A = Image.open(item_A).convert('RGB')
-        #image_B = Image.open(item_B).convert('RGB')
-        image_A = Image.open(item_A)
-        image_B = Image.open(item_B)
+        image_A = Image.open(item_A).convert('RGB')
+        image_B = Image.open(item_B).convert('RGB')
+        #image_A = Image.open(item_A)
+        #image_B = Image.open(item_B)
 
         image_A = self.transform(image_A)
         image_B = self.transform(image_B)

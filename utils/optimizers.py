@@ -6,9 +6,9 @@ def get_optimizers(models, config):
     '''
     Returns a dictionary with the optimizers for the models
     '''
-    if config['model'] == "base-u-net":
-        opt = optim.Adam(models['unet'].parameters(), lr=config['learning_rate'])
-        optimizers = {'opt': opt}
+    if config['model'] == "baseunet":
+        opt = optim.Adam(models['gen'].parameters(), lr=config['learning_rate'])
+        optimizers = {'opt_gen': opt}
     elif config['model'] == 'pix2pix':
         opt_gen = optim.Adam(models['gen'].parameters(), lr=config['learning_rate'], betas=(config['beta1'], config['beta2']))
         opt_disc = optim.Adam(models['disc'].parameters(), lr=config['learning_rate'], betas=(config['beta1'], config['beta2']))
@@ -29,8 +29,11 @@ def get_optimizers(models, config):
 
 
 def load_checkpoint(config, optimizers):
-    if config['model'] == "base-u-net":
-        return
+    if config['model'] == "baseunet":
+        filename_gen =  'epoch_' + str(config['epoch_count']) + '_' + config['model'] + '_gen' + '.pth.tar'
+        path_gen = os.path.join(config['checkpoint_load_pth'], filename_gen)
+        checkpoint = torch.load(path_gen, config['device'])
+        optimizers['opt_gen'].load_state_dict(checkpoint["optimizer"])
     elif config['model'] == 'pix2pix':
         # Load generator
         filename_gen =  'epoch_' + str(config['epoch_count']) + '_' + config['model'] + '_gen' + '.pth.tar'

@@ -9,11 +9,16 @@ def get_loss_function(config):
         return BCEWithLogitsLoss()
     elif loss_fn_name == 'BCEWithLogitsLossOverList':
         return GANLoss(config)
+    elif loss_fn_name == "BCELoss":
+        return BCELoss()
     else:
         raise ValueError("Your specified loss does not exist.")
 
 def BCEWithLogitsLoss():
     return nn.BCEWithLogitsLoss()
+
+def BCELoss():
+    return nn.BCELoss()
 
 
 class GANLoss(nn.Module):
@@ -58,3 +63,8 @@ class GANLoss(nn.Module):
         else:            
             target_tensor = self.get_target_tensor(input[-1], target_is_real)
             return self.loss(input[-1], target_tensor)
+
+
+def dice_loss(self, y_true, y_pred):
+    loss = 1 - self.generalized_dice_coefficient(y_true, y_pred)
+    return loss

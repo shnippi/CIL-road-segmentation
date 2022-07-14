@@ -5,6 +5,7 @@ from utils.transformations import get_transforms
 from dataset.map_dataset import MapDataset
 from dataset.paired_dataset import PairedDataset
 from dataset.original_pix2pix import OriginalPix2Pix
+from dataset.paired_dataset_label import PairedDatasetLabel
 from torch.utils.data import DataLoader
 from models.base_u_net import BASE_U_NET
 from models.pix2pix import Pix2Pix_Generator
@@ -16,10 +17,10 @@ def load_model(config, device):
     '''
     Return a dictionary of all the needed models. In Case of a GAN the dictionary contains the discriminator and generator.
     '''
-    if config['model'] == "base-u-net":
+    if config['model'] == "baseunet":
         model = BASE_U_NET(in_channels=3, out_channels=1).to(device)
-        models = {'unet': model}
-        wandb.watch(models['unet'])
+        models = {'gen': model}
+        wandb.watch(models['gen'])
     elif config['model'] == 'pix2pix':
         gen = Pix2Pix_Generator().to(device)
         disc = Pix2Pix_Descriminator().to(device)
@@ -49,8 +50,14 @@ def save_checkpoint(models, optimizers, config, epoch):
     if not os.path.exists(directory):
         os.makedirs(directory)
     
-    if config['model'] == "base-u-net":
-        return
+    if config['model'] == "baseunet":
+        filename =  'epoch_' + str(epoch) + '_' + config['model']+ '_gen' + '.pth.tar'
+        path = os.path.join(directory, filename)
+        checkpoint = {
+            "state_dict": models['gen'].state_dict(),
+            "optimizer": optimizers['opt_gen'].state_dict(),
+        }
+        torch.save(checkpoint, path)
     elif config['model'] == 'pix2pix':
         # Save generator
         filename =  'epoch_' + str(epoch) + '_' + config['model']+ '_gen' + '.pth.tar'
@@ -93,8 +100,11 @@ def save_checkpoint(models, optimizers, config, epoch):
 
 
 def load_checkpoint(config, models):
-    if config['model'] == "base-u-net":
-        return
+    if config['model'] == "baseunet":
+        filename_gen =  'epoch_' + str(config['epoch_count']) + '_' +  config['model'] + '_gen' + '.pth.tar'
+        path_gen = os.path.join(config['checkpoint_load_pth'], filename_gen)
+        checkpoint = torch.load(path_gen, config['device'])
+        models['gen'].load_state_dict(checkpoint["state_dict"])
     elif config['model'] in ['pix2pix', 'pix2pixHD']:
         # Load generator
         filename_gen =  'epoch_' + str(config['epoch_count']) + '_' +  config['model'] + '_gen' + '.pth.tar'
@@ -158,6 +168,29 @@ def get_dataloaders(config):
             phase='test',
             transform=val_transform
         )
+
+    elif config['dataset'] == 'PairedDatasetLabel':
+        train_dataset = PairedDatasetLabel(
+            root_A=config['root_A'],
+            root_B=config['root_B'],
+            phase='train',
+            transform=train_transform
+        )
+
+        val_dataset = PairedDatasetLabel(
+            root_A=config['root_A'],
+            root_B=config['root_B'],
+            phase='val',
+            transform=val_transform
+        )
+
+        test_dataset = PairedDatasetLabel(
+            root_A=config['root_A'],
+            root_B=config['root_B'],
+            phase='test',
+            transform=val_transform
+        )
+
 
     elif config['dataset'] == 'OriginalPix2Pix':
         train_dataset = OriginalPix2Pix(

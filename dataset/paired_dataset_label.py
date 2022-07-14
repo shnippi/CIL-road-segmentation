@@ -1,8 +1,10 @@
 import os
+from matplotlib import image
 from torch.utils.data import Dataset
 from PIL import Image
+import torch
 
-class PairedDataset(Dataset):
+class PairedDatasetLabel(Dataset):
 
     def __init__(self, root_A, root_B, phase, transform):
         """
@@ -10,7 +12,8 @@ class PairedDataset(Dataset):
             root_dir (string): Directory of the training data
             phase (sting): Either "train" or "val"
         """
-        self.transform = transform
+        
+        self.transform_A, self.transform_B = transform
 
         # List of all the image paths from A
         dir_A = os.path.join(root_A, phase)
@@ -32,8 +35,11 @@ class PairedDataset(Dataset):
         image_A = Image.open(item_A).convert('RGB')
         image_B = Image.open(item_B).convert('RGB').convert('L')
 
-        image_A = self.transform(image_A)
-        #image_B = self.transform(image_B)
+        image_A = self.transform_A(image_A)
+        image_B = self.transform_B(image_B)
+
+        #image_B = image_B/255.0
+        image_B = torch.round(image_B)
 
         return {'A': image_A, 'B': image_B}
 

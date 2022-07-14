@@ -20,7 +20,7 @@ class DoubleConv(nn.Module):
 
 class BASE_U_NET(nn.Module):
     def __init__(
-            self, in_channels=3, out_channels=1, features=[64, 128, 256, 512],
+            self, in_channels=3, out_channels=1, features=[32, 64, 128, 256],
     ):
         super(BASE_U_NET, self).__init__()
         self.ups = nn.ModuleList()
@@ -43,6 +43,7 @@ class BASE_U_NET(nn.Module):
 
         self.bottleneck = DoubleConv(features[-1], features[-1]*2)
         self.final_conv = nn.Conv2d(features[0], out_channels, kernel_size=1)
+        self.sigmoid = nn.Sigmoid()
 
     def forward(self, x):
         skip_connections = []
@@ -66,14 +67,21 @@ class BASE_U_NET(nn.Module):
             concat_skip = torch.cat((skip_connection, x), dim=1)
             x = self.ups[idx+1](concat_skip)
 
-        return self.final_conv(x)
+        x = self.final_conv(x)
+        x = self.sigmoid(x)
+
+        return x
 
 # checks if output shape matches input shape
 def test():
-    x = torch.randn((3, 1, 161, 161))
-    model = BASE_U_NET(in_channels=1, out_channels=1)
+    x = torch.randn((1, 3, 256, 256))
+    out = torch.randn((1, 1, 256, 256))
+    model = BASE_U_NET(in_channels=3, out_channels=1)
     preds = model(x)
-    assert preds.shape == x.shape
+    assert preds.shape == out.shape
+
+    print(sum(p.numel() for p in model.parameters()))
+
 
 if __name__ == "__main__":
     test()

@@ -10,7 +10,7 @@ from utils.wandb import initialize
 def main():
     # Config arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config_path", default="configs/pix2pix.yaml")
+    parser.add_argument("--config_path", default="configs/baseunet.yaml")
     args = parser.parse_args()
     config = yaml.safe_load(open(args.config_path, "r"))
     seed = config['seed']

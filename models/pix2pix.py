@@ -29,10 +29,14 @@ class Pix2Pix_Generator(nn.Module):
         self.up6 = BlockUp(features*4*2, features*2, act="relu", use_dropout=False)
         self.up7 = BlockUp(features*2*2, features*1, act="relu", use_dropout=False)
 
+        # change the "1" to in_channels (for rgb)
         self.finalup = nn.Sequential(
-            nn.ConvTranspose2d(features*2, in_channles, 4, stride=2, padding=1),
+            nn.ConvTranspose2d(features*2, 3, 4, stride=2, padding=1),
             nn.Tanh(),    
         )
+
+        self.last = nn.Conv2d(3, 1, 3, padding=1)
+        self.sigmoid = nn.Sigmoid()
 
     def forward(self, x):
         d1 = self.initial_down(x)
@@ -55,11 +59,16 @@ class Pix2Pix_Generator(nn.Module):
 
         final = self.finalup(torch.cat([up7, d1], 1))
 
+        # For BCELoss
+        final = self.last(final)
+        final = self.sigmoid(final)
+
         return final
 
 
 class Pix2Pix_Descriminator(nn.Module):
-    def __init__(self, in_channels=3, features=[64, 128, 256, 512]):
+    # Change in_channels to 3 for rgb
+    def __init__(self, in_channels=1, features=[64, 128, 256, 512]):
         super().__init__()
         self.initial_Block = nn.Sequential(
             nn.Conv2d(in_channels*2, features[0], kernel_size=4, stride=2, padding=1, padding_mode="reflect"),

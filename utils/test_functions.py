@@ -35,13 +35,12 @@ def pix2pix_test_fn(
             A = data['A']
             A = A.to(device)
 
-            # Train Discriminator
             B_fake = gen(A)
             
             pil_img = trans_tensToPil(B_fake.squeeze())
             pil_img = pil_img.resize((400, 400))
 
-            path = "results/roadmaps/" + str(count) + ".png"
+            path = "results/roadmaps/" + config['model'] + "/" + str(count) + ".png"
             pil_img.save(path)
             count += 1
 
@@ -65,13 +64,12 @@ def baseunet_test_fn(
             A = data['A']
             A = A.to(device)
 
-            # Train Discriminator
             B_fake = gen(A)
             
             pil_img = trans_tensToPil(B_fake.squeeze())
             pil_img = pil_img.resize((400, 400))
 
-            path = "results/roadmaps/" + str(count) + ".png"
+            path = "results/roadmaps/" + config['model'] + "/" + str(count) + ".png"
             pil_img.save(path)
             count += 1
 

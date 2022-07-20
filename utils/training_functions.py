@@ -69,7 +69,7 @@ def pix2pix_train_fn(
     gen.train()
     disc.train()
 
-    l1 = torch.nn.L1Loss()
+    bceLogitLoss = torch.nn.BCEWithLogitsLoss()
     loss_sum = 0
 
     with tqdm(train_dataloader) as tepoch:
@@ -79,29 +79,26 @@ def pix2pix_train_fn(
             B = data['B']
             A, B = A.to(device), B.to(device)
 
-            # Train Discriminator
             B_fake = gen(A)
-            #D_real = disc(A, B)
-            #D_fake = disc(A, B_fake.detach())
-            #D_real_loss = loss_fn(D_real, torch.ones_like(D_real))
-            #D_fake_loss = loss_fn(D_fake, torch.zeros_like(D_fake))
-            #D_loss = (D_real_loss + D_fake_loss)
 
-            #opt_disc.zero_grad()
-            #D_loss.backward()
-
+            # Train Discriminator
+            D_real = disc(A, B)
+            D_fake = disc(A, B_fake.detach())
+            D_real_loss = bceLogitLoss(D_real, torch.ones_like(D_real))
+            D_fake_loss = bceLogitLoss(D_fake, torch.zeros_like(D_fake))
+            D_loss = (D_real_loss + D_fake_loss)
             # Maybe this is actually wrong? Because we need disc in the discriminator step
             # Since in the next step we update the Generator (but already with the updated Disc)
             # The actual opt_step should parobably done after the GAN pass.
-            #opt_disc.step()
+            opt_disc.zero_grad()
+            D_loss.backward()
+            opt_disc.step()
 
             # Train Generator
-            #D_fake = disc(A, B_fake)
-            #G_fake_loss = loss_fn(D_fake, torch.ones_like(D_fake))
-            #L1_loss = l1(B_fake, B) * config['l1_lambda']
-            #G_loss = G_fake_loss + L1_loss
-
-            G_loss = loss_fn(B_fake, B)
+            D_fake = disc(A, B_fake)
+            G_fake_loss = bceLogitLoss(D_fake, torch.ones_like(D_fake))
+            bce_loss = loss_fn(B_fake, B)
+            G_loss = G_fake_loss + 50*bce_loss
 
             opt_gen.zero_grad()
             G_loss.backward()
@@ -114,14 +111,14 @@ def pix2pix_train_fn(
             wandb.log({"epoch": epoch})
             wandb.log({"loss": loss_sum/(batch+1)})
             wandb.log({"loss-gen": G_loss})
-            #wandb.log({"loss-gen-fake": G_fake_loss})
-            #wandb.log({"loss-gen-l1": L1_loss})
-            #wandb.log({"loss-disc": D_loss})
+            wandb.log({"loss-gen-fake": G_fake_loss})
+            wandb.log({"loss-disc": D_loss})
+            wandb.log({"bce_loss": bce_loss})
+
 
             # Some small ev
             # if batch % 1000 == 0:
             #    val_small_fn(models, loss_fn, val_small_dataloader, epoch, batch, config, device)
-
 
 
 

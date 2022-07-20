@@ -1,8 +1,8 @@
 debug: True
-wandb_logging: False
+wandb_logging: True
 save_checkpoint: True
 load_from_checkpoint: True
-epoch_count: 8
+epoch_count: 5
 
 mode: "train"
 
@@ -12,13 +12,13 @@ loss_function: "BCELoss"
 transformation: "label" # rgb, label
 
 
-root_A: "data/cil-road-segmentation-2022/images"
-root_B: "data/cil-road-segmentation-2022/groundtruth"
-#root_A: "data/google/images"
-#root_B: "data/google/masks"
+#root_A: "data/cil-road-segmentation-2022/images"
+#root_B: "data/cil-road-segmentation-2022/groundtruth"
+root_A: "data/google/images"
+root_B: "data/google/masks"
 
 checkpoint_root: "models/checkpoints"
-checkpoint_load_pth: "models/checkpoints/leafy-surf-114"
+checkpoint_load_pth: "models/checkpoints/upbeat-cosmos-122"
 
 image_height: 256 # They are actually 400 (We upsample/downsample)
 image_width: 256 # They are actually 400 (We upsample/downsample)

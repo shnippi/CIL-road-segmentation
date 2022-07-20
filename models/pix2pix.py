@@ -67,11 +67,11 @@ class Pix2Pix_Generator(nn.Module):
 
 
 class Pix2Pix_Descriminator(nn.Module):
-    # Change in_channels to 3 for rgb
-    def __init__(self, in_channels=1, features=[64, 128, 256, 512]):
+    # Change in_channels to 6 for rgb
+    def __init__(self, in_channels=4, features=[64, 128, 256, 512]):
         super().__init__()
         self.initial_Block = nn.Sequential(
-            nn.Conv2d(in_channels*2, features[0], kernel_size=4, stride=2, padding=1, padding_mode="reflect"),
+            nn.Conv2d(in_channels, features[0], kernel_size=4, stride=2, padding=1, padding_mode="reflect"),
             nn.LeakyReLU(0.2),
         )
 

@@ -21,7 +21,7 @@ def main():
     epochs = config['epochs']
 
     # Wandb support
-    initialize(config)
+    initialize(config)  
 
     if config['debug']:
         os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
@@ -41,6 +41,7 @@ def main():
     loss_fn = get_loss_function(config)
 
     # Set optimizer
+    config['load_from_checkpoint'] = False
     optimizers = get_optimizers(models, config)
 
     # Get training and validation function

@@ -3,32 +3,16 @@ import torch.nn as nn
 import torchvision.transforms.functional as TF
 import math
 import numpy as np
-from collections import OrderedDict
 
 ###################################################################################################
 # Simple U-Net (version1)
 
-class DoubleConv(nn.Module):
-    def __init__(self, in_channels, out_channels):
-        super(DoubleConv, self).__init__()
-        self.conv = nn.Sequential(
-            nn.Conv2d(in_channels, out_channels, 3, 1, 1, bias=False),
-            nn.BatchNorm2d(out_channels),
-            nn.ReLU(inplace=True),
-            nn.Conv2d(out_channels, out_channels, 3, 1, 1, bias=False),
-            nn.BatchNorm2d(out_channels),
-            nn.ReLU(inplace=True),
-        )
 
-    def forward(self, x):
-        return self.conv(x)
-
-
-class BASE_U_NETv1(nn.Module):
+class BASE_U_NET(nn.Module):
     def __init__(
             self, in_channels=3, out_channels=1, features=[32, 64, 128, 256],
     ):
-        super(BASE_U_NETv1, self).__init__()
+        super(BASE_U_NET, self).__init__()
         self.ups = nn.ModuleList()
         self.downs = nn.ModuleList()
         self.pool = nn.MaxPool2d(kernel_size=2, stride=2)
@@ -77,6 +61,21 @@ class BASE_U_NETv1(nn.Module):
         x = self.sigmoid(x)
 
         return x
+
+class DoubleConv(nn.Module):
+    def __init__(self, in_channels, out_channels):
+        super(DoubleConv, self).__init__()
+        self.conv = nn.Sequential(
+            nn.Conv2d(in_channels, out_channels, 3, 1, 1, bias=False),
+            nn.BatchNorm2d(out_channels),
+            nn.ReLU(inplace=True),
+            nn.Conv2d(out_channels, out_channels, 3, 1, 1, bias=False),
+            nn.BatchNorm2d(out_channels),
+            nn.ReLU(inplace=True),
+        )
+
+    def forward(self, x):
+        return self.conv(x)
 
 ############################################################################################################
 # Dilated Convolution (arch A)
@@ -197,21 +196,22 @@ class Bottleneck(nn.Module):
 
 ############################################################################################################
 # Pretrained DRN Network
-class BASE_U_NET(nn.Module):
+class BASE_U_NETv3(nn.Module):
     def __init__(self, in_channels, out_channels):
-        super(BASE_U_NET, self).__init__()
+        super(BASE_U_NETv3, self).__init__()
 
         self.model = DRN_SEG()
         
         # Load pretrained base model
-        pretrained_dict = torch.load('models/checkpoints/drn/epoch_0_baseunet_gen.pth.tar', 'cuda')
-        model_dict = self.model.base.state_dict()
-        pretrained_dict2 = {k[5:]: v for k, v in pretrained_dict.items() if k[5:] in model_dict}
-        model_dict.update(pretrained_dict2) 
-        self.model.base.load_state_dict(pretrained_dict2)
-
-        for param in self.model.base.parameters():
-            param.requires_grad = False
+        pretrained = False
+        if pretrained:
+            pretrained_dict = torch.load('models/checkpoints/drn/epoch_0_baseunet_gen.pth.tar', 'cuda')
+            model_dict = self.model.base.state_dict()
+            pretrained_dict2 = {k[5:]: v for k, v in pretrained_dict.items() if k[5:] in model_dict}
+            model_dict.update(pretrained_dict2) 
+            self.model.base.load_state_dict(pretrained_dict2)
+            for param in self.model.base.parameters():
+                param.requires_grad = False
 
     def forward(self, x):
         return self.model(x)

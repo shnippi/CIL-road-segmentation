@@ -10,13 +10,16 @@ from utils.wandb import initialize
 def main():
     # Config arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config_path", default="configs/pix2pix.yaml")
+    parser.add_argument("--config_path", default="configs/baseunet.yaml")
     args = parser.parse_args()
     config = yaml.safe_load(open(args.config_path, "r"))
     seed = config['seed']
 
 
     # Wandb support
+    config['wandb_logging'] = False
+    config['root_A'] = "data/cil-road-segmentation-2022/images_normalized"
+    config['root_B'] = "data/cil-road-segmentation-2022/groundtruth"
     initialize(config)
 
     if config['debug']:

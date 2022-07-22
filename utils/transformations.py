@@ -34,6 +34,9 @@ def get_transforms(config):
         train_transform_A = transforms.Compose(
             [
                 transforms.Resize(size=(IMAGE_HEIGHT, IMAGE_WIDTH)),
+                #transforms.RandomRotation(10),
+                #transforms.RandomHorizontalFlip(p=0.5),
+                #transforms.RandomVerticalFlip(p=0.1),
                 transforms.ToTensor(),
                 transforms.Normalize(
                     mean=[0.5, 0.5, 0.5],
@@ -45,6 +48,9 @@ def get_transforms(config):
         train_transform_B = transforms.Compose(
             [
                 transforms.Resize(size=(IMAGE_HEIGHT, IMAGE_WIDTH)),
+                #transforms.RandomRotation(10),
+                #transforms.RandomHorizontalFlip(p=0.5),
+                #transforms.RandomVerticalFlip(p=0.1),
                 transforms.ToTensor(),
             ],
         )

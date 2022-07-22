@@ -1,34 +1,34 @@
 debug: True
 wandb_logging: True
 save_checkpoint: True
-load_from_checkpoint: False
-epoch_count: 0
+load_from_checkpoint: True
+epoch_count: 60
 
-mode: "eval"
+mode: "train"
 
 model: "baseunet"
 dataset: "PairedDatasetLabel"
-loss_function: "BCELoss"
+loss_function: "DiceLoss" # DiceLoss, BCELoss
 transformation: "label"
 
-#root_A: "data/cil-road-segmentation-2022/images"
-#root_B: "data/cil-road-segmentation-2022/groundtruth"
-root_A: "data/google/images"
-root_B: "data/google/masks"
+root_A: "data/cil-road-segmentation-2022/images_normalized"
+root_B: "data/cil-road-segmentation-2022/groundtruth"
+#root_A: "data/google/images_normalized"
+#root_B: "data/google/masks"
 
 checkpoint_root: "models/checkpoints"
-checkpoint_load_pth: "models/checkpoints/drn"
+checkpoint_load_pth: "models/checkpoints/treasured-star-153"
 
-image_height: 256 # They are actually 400 (We upsample/downsample)
-image_width: 256 # They are actually 400 (We upsample/downsample)
+image_height: 400 # They are actually 400 (We upsample/downsample)
+image_width: 400 # They are actually 400 (We upsample/downsample)
 batch_size: 1
 epochs: 100
 learning_rate: 0.0002
-beta1: 0.5
-beta2: 0.999
+#beta1: 0.5
+#beta2: 0.999
 l1_lambda: 100
 device: 'cuda'
-num_workers: 1
-pin_memory: False
+num_workers: 16
+pin_memory: True
 
 seed: 1234

@@ -11,6 +11,8 @@ def get_loss_function(config):
         return GANLoss(config)
     elif loss_fn_name == "BCELoss":
         return BCELoss()
+    elif loss_fn_name == "DiceLoss":
+        return dice_loss
     else:
         raise ValueError("Your specified loss does not exist.")
 
@@ -65,6 +67,10 @@ class GANLoss(nn.Module):
             return self.loss(input[-1], target_tensor)
 
 
-def dice_loss(self, y_true, y_pred):
-    loss = 1 - self.generalized_dice_coefficient(y_true, y_pred)
-    return loss
+def dice_loss(input, target):
+    dims = (1, 2, 3)
+    intersection = torch.sum(input * target, dims)
+    cardinality = torch.sum(input + target, dims)
+
+    dice_score = 2. * intersection / (cardinality + 0.0001)
+    return torch.mean(1. - dice_score)

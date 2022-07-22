@@ -8,14 +8,14 @@ mode: "train"
 
 model: "pix2pix"
 dataset: "PairedDatasetLabel"
-loss_function: "BCELoss"
+loss_function: "DiceLoss"
 transformation: "label" # rgb, label
 
 
-#root_A: "data/cil-road-segmentation-2022/images"
-#root_B: "data/cil-road-segmentation-2022/groundtruth"
-root_A: "data/google/images"
-root_B: "data/google/masks"
+root_A: "data/cil-road-segmentation-2022/images"
+root_B: "data/cil-road-segmentation-2022/groundtruth"
+#root_A: "data/google/images"
+#root_B: "data/google/masks"
 
 checkpoint_root: "models/checkpoints"
 checkpoint_load_pth: "models/checkpoints/upbeat-cosmos-122"

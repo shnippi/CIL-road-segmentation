@@ -39,7 +39,6 @@ def baseunet_train_fn(
             A, B = A.to(device), B.to(device)
 
             out = model(A)
-
             loss = loss_fn(out, B)
 
             optimizer.zero_grad()
@@ -49,6 +48,9 @@ def baseunet_train_fn(
             loss_sum += loss.item()
             tepoch.set_description(f"Epoch {epoch}")
             tepoch.set_postfix(loss = loss_sum/(batch+1))
+            wandb.log({"epoch": epoch})
+            wandb.log({"loss": loss_sum/(batch+1)})
+
 
 
 def pix2pix_train_fn(

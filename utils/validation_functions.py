@@ -33,10 +33,16 @@ def get_val_small_fn(config):
 
 def baseunet_val_fn(models, loss_fn, val_dataloader, epoch, config, device):
     gen = models['gen']
+    loss_sum = 0
+    
+    if config['root_A'] == "data/testdata/images_normalized":
+        val = 'val2'
+    else:
+        val = 'val1'
 
     with torch.no_grad():
         with tqdm(val_dataloader) as tepoch:
-            num_samples = 8
+            num_samples = 3
             generated = []
             label =[]
             sattelite = []
@@ -49,32 +55,36 @@ def baseunet_val_fn(models, loss_fn, val_dataloader, epoch, config, device):
 
                 # Run Discriminator
                 B_fake = gen(A)
+                loss = loss_fn(B_fake, B)
 
-                generated.append(B_fake[0])
-                sattelite.append(A[0])
-                label.append(B[0])
+                loss_sum += float(loss.item())
+                wandb.log({"loss-" + val: loss_sum/(batch+1)})
+                tepoch.set_postfix(loss = loss_sum/(batch+1))
 
-                if len(generated) >= num_samples:
+                if len(generated) < num_samples:
+                    generated.append(B_fake[0])
+                    sattelite.append(A[0])
+                    label.append(B[0])
 
-                    caption = "epoch_" + str(epoch)
+            caption = "epoch_" + str(epoch)
 
-                    # Generated Roadmap Examples
-                    image_tensors = [generated[i]*0.5+0.5 for i in range(num_samples)]
-                    images = [transforms.ToPILImage()(image) for image in image_tensors]
-                    wandb.log({"val-generated": [wandb.Image(image, caption=caption) for image in images]})
+            # Generated Roadmap Examples
+            image_tensors = [generated[i]*0.5+0.5 for i in range(num_samples)]
+            images = [transforms.ToPILImage()(image) for image in image_tensors]
+            wandb.log({val + "-generated": [wandb.Image(image, caption=caption) for image in images]})
 
-                    if epoch == 0:
-                        # Sattelite Images
-                        image_tensors = [sattelite[i]*0.5+0.5 for i in range(num_samples)]
-                        images = [transforms.ToPILImage()(image) for image in image_tensors]
-                        wandb.log({"val-original": [wandb.Image(image, caption=caption) for image in images]})
+            if epoch == config['epoch_count']:
+                # Sattelite Images
+                image_tensors = [sattelite[i]*0.5+0.5 for i in range(num_samples)]
+                images = [transforms.ToPILImage()(image) for image in image_tensors]
+                wandb.log({val + "-original": [wandb.Image(image, caption=caption) for image in images]})
 
-                        # Real Roadmap images
-                        image_tensors = [label[i]*0.5+0.5 for i in range(num_samples)]
-                        images = [transforms.ToPILImage()(image) for image in image_tensors]
-                        wandb.log({"val-real": [wandb.Image(image, caption=caption) for image in images]})
-                        
-                    return
+                # Real Roadmap images
+                image_tensors = [label[i]*0.5+0.5 for i in range(num_samples)]
+                images = [transforms.ToPILImage()(image) for image in image_tensors]
+                wandb.log({val + "-real": [wandb.Image(image, caption=caption) for image in images]})
+                
+            return
 
 def baseunet_val_small_fn(models, loss_fn, val_dataloader, epoch, batch_nr, config, device):
     gen = models['gen']
@@ -124,6 +134,7 @@ def pix2pix_val_fn(models, loss_fn, val_dataloader, epoch, config, device):
             loss_sum = 0
 
             for batch, data in enumerate(tepoch):
+
                 # X:= Sattelite, Y:= Roadmap
                 A = data['A']
                 B = data['B']

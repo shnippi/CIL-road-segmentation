@@ -49,8 +49,8 @@ def main():
     val_fn = get_val_fn(config)
     val_small_fn = get_val_small_fn(config)
 
-    # Create second Validation on data we submit
-    config2 = config
+    # Create second Validation on data we submits
+    config2 = config.copy()
     config2['root_A'] = "data/testdata/images_normalized"
     config2['root_B'] = "data/testdata/groundtruth"
     val_fn2 = get_val_fn(config2)
@@ -58,6 +58,7 @@ def main():
 
     # Before we start training we validate our model for a first time
     #val_fn(models, loss_fn, val_dataloader, -1, config, device)
+    #val_fn2(models, loss_fn, val_dataloader2, epoch, config2, device)
 
     # Loop through the Epochs
     for epoch in range(config['epoch_count'], epochs):

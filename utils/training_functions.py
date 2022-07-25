@@ -1,20 +1,21 @@
 import torch
 import wandb
 from tqdm import tqdm
+from utils.data_handling import save_checkpoint
 
 def get_train_fn(config):
-    if config['model'] == "baseunet":
-        train_fn = baseunet_train_fn
-    elif config['model'] == 'pix2pix':
-        train_fn = pix2pix_train_fn
+    if config['generation_mode'] == "classic":
+        train_fn = classic_train_fn
+    elif config['generation_mode'] == 'gan':
+        train_fn = gan_train_fn
     elif config['model'] == 'pix2pixHD':
         train_fn = pix2pixHD_train_fn
     else:
-        raise ValueError("Your specified model's training function does not exist")
+        raise ValueError("Your specified training function does not exist")
     
     return train_fn
 
-def baseunet_train_fn(
+def classic_train_fn(
         models, 
         loss_fn, 
         optimizers, 
@@ -45,6 +46,10 @@ def baseunet_train_fn(
             loss.backward()
             optimizer.step()
 
+            if batch%200 == 0 and batch!=0:
+                #print("Saving checkpoint")
+                save_checkpoint(models, optimizers, config, epoch)
+
             loss_sum += loss.item()
             tepoch.set_description(f"Epoch {epoch}")
             tepoch.set_postfix(loss = loss_sum/(batch+1))
@@ -53,7 +58,7 @@ def baseunet_train_fn(
 
 
 
-def pix2pix_train_fn(
+def gan_train_fn(
         models, 
         loss_fn, 
         optimizers, 
@@ -89,6 +94,7 @@ def pix2pix_train_fn(
             D_real_loss = bceLogitLoss(D_real, torch.ones_like(D_real))
             D_fake_loss = bceLogitLoss(D_fake, torch.zeros_like(D_fake))
             D_loss = (D_real_loss + D_fake_loss)
+
             # Maybe this is actually wrong? Because we need disc in the discriminator step
             # Since in the next step we update the Generator (but already with the updated Disc)
             # The actual opt_step should parobably done after the GAN pass.
@@ -116,11 +122,6 @@ def pix2pix_train_fn(
             wandb.log({"loss-gen-fake": G_fake_loss})
             wandb.log({"loss-disc": D_loss})
             wandb.log({"bce_loss": bce_loss})
-
-
-            # Some small ev
-            # if batch % 1000 == 0:
-            #    val_small_fn(models, loss_fn, val_small_dataloader, epoch, batch, config, device)
 
 
 

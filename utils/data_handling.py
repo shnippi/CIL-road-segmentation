@@ -7,7 +7,7 @@ from dataset.paired_dataset import PairedDataset
 from dataset.original_pix2pix import OriginalPix2Pix
 from dataset.paired_dataset_label import PairedDatasetLabel
 from torch.utils.data import DataLoader
-from models.base_u_net import BASE_U_NET
+from models.unet import BASE_U_NET
 from models.pix2pix import Pix2Pix_Generator
 from models.pix2pix import Pix2Pix_Descriminator
 from models.pix2pixHD import Pix2PixHD_Generator
@@ -17,7 +17,7 @@ def load_model(config, device):
     '''
     Return a dictionary of all the needed models. In Case of a GAN the dictionary contains the discriminator and generator.
     '''
-    if config['model'] == "baseunet":
+    if config['model'] == "unet":
         model = BASE_U_NET(in_channels=3, out_channels=1).to(device)
         models = {'gen': model}
         wandb.watch(models['gen'])
@@ -50,7 +50,7 @@ def save_checkpoint(models, optimizers, config, epoch):
     if not os.path.exists(directory):
         os.makedirs(directory)
     
-    if config['model'] == "baseunet":
+    if config['model'] == "classic":
         filename =  'epoch_' + str(epoch) + '_' + config['model']+ '_gen' + '.pth.tar'
         path = os.path.join(directory, filename)
         checkpoint = {
@@ -58,25 +58,7 @@ def save_checkpoint(models, optimizers, config, epoch):
             "optimizer": optimizers['opt_gen'].state_dict(),
         }
         torch.save(checkpoint, path)
-    elif config['model'] == 'pix2pix':
-        # Save generator
-        filename =  'epoch_' + str(epoch) + '_' + config['model']+ '_gen' + '.pth.tar'
-        path = os.path.join(directory, filename)
-        checkpoint = {
-            "state_dict": models['gen'].state_dict(),
-            "optimizer": optimizers['opt_gen'].state_dict(),
-        }
-        torch.save(checkpoint, path)
-
-        # Save discriminator
-        filename =  'epoch_' + str(epoch) + '_' + config['model'] + '_disc' + '.pth.tar'
-        path = os.path.join(directory, filename)
-        checkpoint = {
-            "state_dict": models['disc'].state_dict(),
-            "optimizer": optimizers['opt_disc'].state_dict(),
-        }
-        torch.save(checkpoint, path)
-    elif config['model'] == 'pix2pixHD':
+    elif config['model'] == 'gan':
         # Save generator
         filename =  'epoch_' + str(epoch) + '_' + config['model']+ '_gen' + '.pth.tar'
         path = os.path.join(directory, filename)
@@ -100,24 +82,24 @@ def save_checkpoint(models, optimizers, config, epoch):
 
 
 def load_checkpoint(config, models):
-    if config['model'] == "baseunet":
+    if config['generation_mode'] == 'classic':
+        # Load generator
         filename_gen =  'epoch_' + str(config['epoch_count']) + '_' +  config['model'] + '_gen' + '.pth.tar'
         path_gen = os.path.join(config['checkpoint_load_pth'], filename_gen)
         checkpoint = torch.load(path_gen, config['device'])
         models['gen'].load_state_dict(checkpoint["state_dict"])
-    elif config['model'] in ['pix2pix', 'pix2pixHD']:
+    elif config['modgeneration_modeel'] == 'gan':
         # Load generator
         filename_gen =  'epoch_' + str(config['epoch_count']) + '_' +  config['model'] + '_gen' + '.pth.tar'
         path_gen = os.path.join(config['checkpoint_load_pth'], filename_gen)
         checkpoint = torch.load(path_gen, config['device'])
         models['gen'].load_state_dict(checkpoint["state_dict"])
 
-        if config['mode'] == "train":
-            # Load discriminator
-            filename_disc =  'epoch_' + str(config['epoch_count']) + '_' +  config['model'] + '_disc' + '.pth.tar'
-            path_disc = os.path.join(config['checkpoint_load_pth'], filename_disc)
-            checkpoint = torch.load(path_disc, config['device'])
-            models['disc'].load_state_dict(checkpoint["state_dict"])
+        # Load discriminator
+        filename_disc =  'epoch_' + str(config['epoch_count']) + '_' +  config['model'] + '_disc' + '.pth.tar'
+        path_disc = os.path.join(config['checkpoint_load_pth'], filename_disc)
+        checkpoint = torch.load(path_disc, config['device'])
+        models['disc'].load_state_dict(checkpoint["state_dict"])
     else:
         raise ValueError("Your specified model does not exist")
 

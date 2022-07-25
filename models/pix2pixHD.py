@@ -1,3 +1,4 @@
+import torch 
 import torch.nn as nn
 import numpy as np
 
@@ -243,8 +244,6 @@ def count_parameters(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
 
 
-
-import torch 
 def test_gen():
     x = torch.randn(1,3,512,512)
     model = Pix2PixHD_Generator()

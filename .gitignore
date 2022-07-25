@@ -8,3 +8,5 @@ api_key.txt
 *.pth.tar
 *.png
 *.csv
+*.pth
+*.tar

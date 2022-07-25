@@ -7,8 +7,8 @@ label_file = 'dummy_submission.csv'
 
 h = 16
 w = h
-imgwidth = int(math.ceil((600.0/w))*w)
-imgheight = int(math.ceil((600.0/h))*h)
+imgwidth = int(math.ceil((400.0/w))*w)
+imgheight = int(math.ceil((400.0/h))*h)
 nc = 3
 
 # Convert an array of binary labels to a uint8
@@ -42,9 +42,9 @@ def reconstruct_from_labels(image_id):
 
         im[j:je, i:ie] = binary_to_uint8(adata)
 
-    Image.fromarray(im).save('prediction_' + '%.3d' % image_id + '.png')
+    Image.fromarray(im).save('results/submisson/prediction_' + '%.3d' % image_id + '.png')
 
     return im
 
-for i in range(1, 5):
+for i in range(144, 288):
     reconstruct_from_labels(i)

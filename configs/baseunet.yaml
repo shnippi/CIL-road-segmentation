@@ -1,13 +1,12 @@
-debug: True
+debug: False
 wandb_logging: True
 save_checkpoint: True
 load_from_checkpoint: True
-epoch_count: 60
+epoch_count: 4
 
-mode: "train"
-
-model: "baseunet"
-dataset: "PairedDatasetLabel"
+model: "baseunet" # unet, pix2pix, pix2pixhd, 
+generation_mode: "gan" # classic, gan,  custom
+dataset: "PairedDatasetLabel" # MapDataset, PairedDataset, PairedDatasetLabel, OriginalPix2Pix
 loss_function: "DiceLoss" # DiceLoss, BCELoss
 transformation: "label"
 
@@ -17,10 +16,10 @@ root_B: "data/cil-road-segmentation-2022/groundtruth"
 #root_B: "data/google/masks"
 
 checkpoint_root: "models/checkpoints"
-checkpoint_load_pth: "models/checkpoints/treasured-star-153"
+checkpoint_load_pth: "models/checkpoints/eager-bee-184"
 
-image_height: 400 # They are actually 400 (We upsample/downsample)
-image_width: 400 # They are actually 400 (We upsample/downsample)
+image_height: 384 # They are actually 400 (We upsample/downsample)
+image_width: 384 # They are actually 400 (We upsample/downsample)
 batch_size: 1
 epochs: 100
 learning_rate: 0.0002
@@ -28,7 +27,7 @@ learning_rate: 0.0002
 #beta2: 0.999
 l1_lambda: 100
 device: 'cuda'
-num_workers: 16
+num_workers: 8
 pin_memory: True
-
+mode: "train"
 seed: 1234

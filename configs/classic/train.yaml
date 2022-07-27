@@ -1,0 +1,41 @@
+# This Config file is for training a classic Architecutre
+# More Information can be read in the guide section
+
+# CHANGE THIS TO THE MODEL YOU WANT
+model: "unet" # unet, drnA, drnD, pix2pix, pix2pixhd, unet3plus, convnext_unet
+
+#################################################################
+
+# In case of runs crashing you can continue the run
+load_from_checkpoint: False
+epoch_count: 0 # For which epoch to start and load a checkpoint
+
+# These are some settings you might want to change
+wandb_logging: True
+loss_function: "BCELoss" # DiceLoss, BCELoss, L1Loss
+epochs: 100
+batch_size: 1
+learning_rate: 0.0002
+image_height: 384 
+image_width: 384 
+
+# Additional Settings
+debug: False
+save_checkpoint: True
+beta1: 0.9
+beta2: 0.999
+disc_lambda: 100
+num_workers: 8
+pin_memory: True
+train_loss_track: 0
+val_loss_track: 0
+seed: 1234
+device: 'cuda'
+generation_mode: "classic" # classic, gan
+dataset: "PairedDatasetLabel" # MapDataset, PairedDataset, PairedDatasetLabel, OriginalPix2Pix
+transformation: "label"
+root_A: "data/google/images_normalized"
+root_B: "data/google/masks"
+checkpoint_root: "models/checkpoints"
+checkpoint_load_pth: "models/checkpoints"
+result_dir: "results"

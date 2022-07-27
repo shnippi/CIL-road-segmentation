@@ -13,6 +13,8 @@ def get_loss_function(config):
         return BCELoss()
     elif loss_fn_name == "DiceLoss":
         return dice_loss
+    elif loss_fn_name == "L1Loss":
+         return L1Loss()
     else:
         raise ValueError("Your specified loss does not exist.")
 
@@ -22,6 +24,8 @@ def BCEWithLogitsLoss():
 def BCELoss():
     return nn.BCELoss()
 
+def L1Loss():
+    return nn.L1Loss()
 
 class GANLoss(nn.Module):
     def __init__(self, config, use_lsgan=False, target_real_label=1.0, target_fake_label=0.0):

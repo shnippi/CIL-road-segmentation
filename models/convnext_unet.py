@@ -113,7 +113,6 @@ class ConvNext_Unet(nn.Module):
         return x
 
 
-
 # ConvNext from https://github.com/facebookresearch/ConvNeXt/blob/main/models/convnext.py
 class Block(nn.Module):
     r""" ConvNeXt Block. There are two equivalent implementations:

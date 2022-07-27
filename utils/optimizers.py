@@ -13,14 +13,8 @@ def get_optimizers(models, config):
         opt_gen = optim.Adam(models['gen'].parameters(), lr=config['learning_rate'], betas=(config['beta1'], config['beta2']))
         opt_disc = optim.Adam(models['disc'].parameters(), lr=config['learning_rate'], betas=(config['beta1'], config['beta2']))
         optimizers = {'opt_gen': opt_gen, 'opt_disc': opt_disc}       
-    elif config['model'] == 'pix2pixHD':
-        params_gen = list(models['gen'].parameters())
-        params_disc = list(models['disc'].parameters())
-        opt_gen = optim.Adam(params_gen, lr=config['learning_rate'], betas=(config['beta1'], config['beta2']))
-        opt_disc = optim.Adam(params_disc, lr=config['learning_rate'], betas=(config['beta1'], config['beta2']))
-        optimizers = {'opt_gen': opt_gen, 'opt_disc': opt_disc}
     else:
-        raise ValueError("Your specified model does not exist (get_optimizers)")
+        raise ValueError("Your specified model mode does not exist (get_optimizers)")
     
     if config['load_from_checkpoint']:
         optimizers = load_optimizer_checkpoint(config, optimizers)

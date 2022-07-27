@@ -10,3 +10,4 @@ api_key.txt
 *.csv
 *.pth
 *.tar
+*.zip

@@ -1,34 +1,32 @@
 # CIL-road-segmentation
-Task: Given a sattelite image return the estimated road segmentation.<br><br>
-Some useful Links:
-- [General Info](https://docs.google.com/document/d/1T5EjTYempPQng1BecGolbLtN5LtCL_xwq2PmmM-mAJ0/edit)
-- [Task Description](https://docs.google.com/document/d/1MVRFu4oKWgAluY7CRzehFH8Pt-TNSW_9JJ6E9gmraZg/edit)
-- [Kaggle 2021](https://www.kaggle.com/c/cil-road-segmentation-2021)
-- [Data CIL 2022](https://polybox.ethz.ch/index.php/s/AGkDmbC8IfmtBkr/authenticate)
+Given a sattelite image we return the estimated road segmentation.<br><br>
 
-## Setup (With Training)
-1. Download datasets
-2. Create the following data-file structure and save your data into the folders: <br>
-    <img src="images/data-structure.png" height=220px>
-3. Run the dataset_generation/roadmap_to_mask.py file (to create the masks)
-4. Delete all sattelite-roadmap-map triplets where the mask has no pixel white. 
+## Setup
+1. Download datasets and put both folders into the /data folder
+    - [Cil-road-segmentation-2022](https://drive.google.com/file/d/1QGM-OkmZZX5SNyVctfb49yjWqATp8bR_/view?usp=sharing)
+    - [Google](https://drive.google.com/file/d/1PqwfdOSPaAug51c93ndg5-A3Yfx7fico/view?usp=sharing)
+2. If you want to use the ConvNext model or Drn-D you have to download their pretrained weights and place them into models/pretrained:
+    - [ConvNext](https://dl.fbaipublicfiles.com/convnext/convnext_xlarge_22k_1k_384_ema.pth)
+    - [Drn-D-105](https://drive.google.com/drive/folders/1fIsCB877l37cFAJomoQzNrEYPqwMwZ4Q)
 
+## Train, Finetune and Test
+You should first write/choose a config file that determines the different design choices. Note that we have places example config files into the config/ folder. What parameter determines what is descibed below.<br>
+- To Train:
+    ```
+    python3 train.py --<path_to_your_config_file>
+    ```
+- To Test:
+    ```
+    python3 test.py --<path_to_your_config_file>
+    ```
 
-## Setup (Only Inference)
-1. TODO
-
-
-## Google Data set Creation
+## Google dataset creation
 1. Make file: `api_key.txt` and paste your google maps API key (static maps)
-2. Create necessary File Structure (See Setup with Training)
-3. Run: `python3 google_maps_data_generation.py`
-
-## Run
-Normal Run:
-```
-python3 train.py
-```
-For debugging:
-```
-CUDA_LAUNCH_BLOCKING=1 python3 train.py
-```
+2. Run the following commands: 
+    ```
+    python3 google_maps_data_generation.py
+    bash dataset_subfolder_split.sh
+    python3 roadmap_to_mask.py
+    python3 delete_empty_masks.py
+    python3 normalize_color.py
+    ```

@@ -1,31 +1,24 @@
+import os
 from torchvision import transforms
-import torch
-import wandb
 from tqdm import tqdm
 from PIL import Image
 
 def get_test_fn(config):
-    if config['model'] == "baseunet":
-        train_fn = baseunet_test_fn
-    elif config['model'] == 'pix2pix':
-        train_fn = pix2pix_test_fn
-    elif config['model'] == 'pix2pixHD':
-        train_fn = None
-    else:
-        raise ValueError("Your specified model's training function does not exist")
+    return test_fn
+
+
+def test_fn(models, test_dataloader, config, device):
+    gen = models['gen']
+    result_path = config['result_dir'] + "/" + config['model'] + "_" \
+        + config['generation_mode']  + "_" + config['transformation']
     
-    return train_fn
+    if config['transformation'] == 'label':
+        result_path = result_path + "/masks"
+    else:
+        result_path = result_path + "/roadmaps"
 
-
-def pix2pix_test_fn(
-        models, 
-        test_dataloader, 
-        config, 
-        device):
-
-    gen = models['gen']
-    #gen.eval()
-
+    if not os.path.exists(result_path):
+        os.makedirs(result_path)
 
     with tqdm(test_dataloader) as tepoch:
         count = 144
@@ -40,35 +33,6 @@ def pix2pix_test_fn(
             pil_img = trans_tensToPil(B_fake.squeeze())
             pil_img = pil_img.resize((400, 400))
 
-            path = "results/roadmaps/" + config['model'] + "/" + str(count) + ".png"
-            pil_img.save(path)
-            count += 1
-
-
-
-def baseunet_test_fn(
-        models, 
-        test_dataloader, 
-        config, 
-        device):
-
-    gen = models['gen']
-    #gen.eval()
-
-
-    with tqdm(test_dataloader) as tepoch:
-        count = 144
-        trans_tensToPil = transforms.ToPILImage()
-        for batch, data in enumerate(tepoch):
-            # X:= Sattelite, Y:= Roadmap
-            A = data['A']
-            A = A.to(device)
-
-            B_fake = gen(A)
-            
-            pil_img = trans_tensToPil(B_fake.squeeze())
-            pil_img = pil_img.resize((400, 400))
-
-            path = "results/roadmaps/" + "drn" + "/" + str(count) + ".png"
+            path = result_path + "/" + str(count) + ".png"
             pil_img.save(path)
             count += 1

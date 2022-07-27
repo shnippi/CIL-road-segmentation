@@ -1,3 +1,4 @@
+import imp
 import torch
 import wandb
 import os
@@ -7,33 +8,50 @@ from dataset.paired_dataset import PairedDataset
 from dataset.original_pix2pix import OriginalPix2Pix
 from dataset.paired_dataset_label import PairedDatasetLabel
 from torch.utils.data import DataLoader
-from models.unet import BASE_U_NET
+from models.convnext_unet import ConvNext_Unet
+from models.drnA import DRN_A
+from models.drnD import DRN_D
+from models.pathGAN_discriminator import PatchGAN_Descriminator
 from models.pix2pix import Pix2Pix_Generator
-from models.pix2pix import Pix2Pix_Descriminator
 from models.pix2pixHD import Pix2PixHD_Generator
-from models.pix2pixHD import Pix2PixHD_Descriminator
+from models.unet import UNet
+from models.unet3plus import Unet3plus
 
 def load_model(config, device):
     '''
     Return a dictionary of all the needed models. In Case of a GAN the dictionary contains the discriminator and generator.
     '''
+
+    # Model selection
     if config['model'] == "unet":
-        model = BASE_U_NET(in_channels=3, out_channels=1).to(device)
-        models = {'gen': model}
-        wandb.watch(models['gen'])
+        gen = UNet(in_channels=3, out_channels=1).to(device)
+    elif config['model'] == 'drnA':
+        gen = DRN_A(in_channels=3, out_channels=1).to(device)
+    elif config['model'] == 'drnD':
+        gen = DRN_D(in_channels=3, out_channels=1).to(device)
     elif config['model'] == 'pix2pix':
-        gen = Pix2Pix_Generator().to(device)
-        disc = Pix2Pix_Descriminator().to(device)
-        models = {'gen': gen, 'disc': disc}
-        wandb.watch((models['gen'], models['disc']))
+        gen = Pix2Pix_Generator(in_channels=3, out_channels=1).to(device)
     elif config['model'] == 'pix2pixHD':
-        gen = Pix2PixHD_Generator().to(device)
-        disc = Pix2PixHD_Descriminator().to(device)
+        gen = Pix2PixHD_Generator(in_channels=3, out_channels=1).to(device)
+    elif config['model'] == 'unet3plus':
+        gen = Unet3plus(in_channels=3, out_channels=1).to(device)
+    elif config['model'] == 'convnext_unet':
+        gen = ConvNext_Unet(in_channels=3, out_channels=1).to(device)
+    else:
+        raise ValueError("Your specified model does not exist")
+
+    # Set the discriminator if we are in GAN-mode
+    if config['generation_mode'] == 'classic':
+        models = {'gen': gen}
+        wandb.watch(models['gen'])
+    elif config['generation_mode'] == 'gan':
+        disc = PatchGAN_Descriminator().to(device)
         models = {'gen': gen, 'disc': disc}
         wandb.watch((models['gen'], models['disc']))
     else:
         raise ValueError("Your specified model does not exist")
 
+    # If load_from_checkpoint is enabled we load the model checkpoints
     if config['load_from_checkpoint']:
         models = load_checkpoint(config, models)
 

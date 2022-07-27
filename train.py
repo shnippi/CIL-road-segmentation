@@ -7,14 +7,14 @@ from utils.reproducability import set_seed, set_device
 from utils.data_handling import get_dataloaders, load_model, save_checkpoint
 from utils.loss_functions import get_loss_function
 from utils.training_functions import get_train_fn
-from utils.validation_functions import get_val_fn, get_val_small_fn
+from utils.validation_functions import get_val_fn
 from utils.optimizers import get_optimizers
 from utils.wandb import initialize
 
 def main():
     # Config arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config_path", default="configs/baseunet.yaml")
+    parser.add_argument("--config_path", default="configs/classic/train.yaml")
     args = parser.parse_args()
     config = yaml.safe_load(open(args.config_path, "r"))
     seed = config['seed']
@@ -41,36 +41,22 @@ def main():
     loss_fn = get_loss_function(config)
 
     # Set optimizer
-    config['load_from_checkpoint'] = False
     optimizers = get_optimizers(models, config)
 
     # Get training and validation function
     train_fn = get_train_fn(config)
     val_fn = get_val_fn(config)
-    val_small_fn = get_val_small_fn(config)
-
-    # Create second Validation on data we submits
-    config2 = config.copy()
-    config2['root_A'] = "data/testdata/images_normalized"
-    config2['root_B'] = "data/testdata/groundtruth"
-    val_fn2 = get_val_fn(config2)
-    _, val_dataloader2, _ = get_dataloaders(config2)
-
-    # Before we start training we validate our model for a first time
-    #val_fn(models, loss_fn, val_dataloader, -1, config, device)
-    #val_fn2(models, loss_fn, val_dataloader2, epoch, config2, device)
 
     # Loop through the Epochs
     for epoch in range(config['epoch_count'], epochs):
         # Run through the epoch
-        train_fn(models, loss_fn, optimizers, train_dataloader, val_small_fn, val_dataloader, epoch, config, device)
+        train_fn(models, loss_fn, optimizers, train_dataloader, epoch, config, device)
 
         # save model
         save_checkpoint(models, optimizers, config, epoch)
 
         # Validate the current models
         val_fn(models, loss_fn, val_dataloader, epoch, config, device)
-        val_fn2(models, loss_fn, val_dataloader2, epoch, config2, device)
 
     wandb.finish()
 

@@ -1,0 +1,36 @@
+# This Config file is for testing a GAN Architecutre from sattelite of mask
+# More Information can be read in the guide section
+
+# CHANGE THIS TO THE SETTINGS YOU WANT
+model: "unet" # unet, drnA, drnD, pix2pix, pix2pixhd, unet3plus, convnext_unet
+epoch_count: 10 # For which epoch to start and load a checkpoint
+checkpoint_load_pth: "models/checkpoints/wandbrun-xyz-uvw"
+#################################################################
+
+# Additional settings
+wandb_logging: False
+loss_function: "DiceLoss" # DiceLoss, BCELoss, L1Loss
+epochs: 10
+batch_size: 1
+learning_rate: 0.0002
+image_height: 384 
+image_width: 384 
+debug: False
+save_checkpoint: True
+load_from_checkpoint: True
+beta1: 0.5
+beta2: 0.999
+disc_lambda: 100
+num_workers: 8
+pin_memory: True
+train_loss_track: 0
+val_loss_track: 0
+seed: 1234
+device: 'cuda'
+generation_mode: "gan" # classic, gan
+dataset: "PairedDatasetLabel" # MapDataset, PairedDataset, PairedDatasetLabel, OriginalPix2Pix
+transformation: "label"
+root_A: "data/cil-road-segmentation-2022/images_normalized"
+root_B: "data/cil-road-segmentation-2022/masks"
+checkpoint_root: "models/checkpoints"
+result_dir: "results"

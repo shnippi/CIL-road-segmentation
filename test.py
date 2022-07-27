@@ -6,20 +6,17 @@ from utils.reproducability import set_seed, set_device
 from utils.data_handling import load_model, get_dataloaders
 from utils.test_functions import get_test_fn
 from utils.wandb import initialize
+from utils.create_submission import create_submission
 
 def main():
     # Config arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config_path", default="configs/baseunet.yaml")
+    parser.add_argument("--config_path", default="configs/classic/test.yaml")
     args = parser.parse_args()
     config = yaml.safe_load(open(args.config_path, "r"))
     seed = config['seed']
 
-
     # Wandb support
-    config['wandb_logging'] = False
-    config['root_A'] = "data/cil-road-segmentation-2022/images_normalized"
-    config['root_B'] = "data/cil-road-segmentation-2022/groundtruth"
     initialize(config)
 
     if config['debug']:
@@ -33,14 +30,17 @@ def main():
     # Create Dataset and Dataloader
     _, _, test_dataloader = get_dataloaders(config)
 
-    # Load model (Takes also care of: Continue training from checkpoint)
+    # Load model
     models = load_model(config, device)
 
-    # Get training and validation function
+    # Get test function
     test_fn = get_test_fn(config)
 
-    # Do the actual testing
+    # Prediction
     test_fn(models, test_dataloader, config, device)
+
+    # Create submission file
+    create_submission(config)
 
 
 if __name__ == "__main__":

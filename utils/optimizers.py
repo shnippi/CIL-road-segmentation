@@ -45,7 +45,3 @@ def load_optimizer_checkpoint(config, optimizers):
         raise ValueError("Your specified model's optimizer checkpoint don't exist")
 
     return optimizers
-
-
-def count_parameters(model):
-    return sum(p.numel() for p in model.parameters() if p.requires_grad)

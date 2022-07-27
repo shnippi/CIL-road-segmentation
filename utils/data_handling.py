@@ -21,7 +21,6 @@ def load_model(config, device):
     '''
     Return a dictionary of all the needed models. In Case of a GAN the dictionary contains the discriminator and generator.
     '''
-
     # Model selection
     if config['model'] == "unet":
         gen = UNet(in_channels=3, out_channels=1).to(device)
@@ -44,10 +43,13 @@ def load_model(config, device):
     if config['generation_mode'] == 'classic':
         models = {'gen': gen}
         wandb.watch(models['gen'])
+        print("Number of trainable Parameters: ", count_parameters(gen))
     elif config['generation_mode'] == 'gan':
         disc = PatchGAN_Descriminator().to(device)
         models = {'gen': gen, 'disc': disc}
         wandb.watch((models['gen'], models['disc']))
+        print("Number of trainable Parameters (gen): ", count_parameters(gen))
+        print("Number of trainable Parameters (disc): ", count_parameters(disc))
     else:
         raise ValueError("Your specified model does not exist")
 
@@ -238,3 +240,7 @@ def get_dataloaders(config):
     )
 
     return train_dataloader, val_dataloader, test_dataloader
+
+
+def count_parameters(model):
+    return sum(p.numel() for p in model.parameters() if p.requires_grad)

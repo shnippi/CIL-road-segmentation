@@ -32,7 +32,7 @@ def classic_train_fn(models, loss_fn, optimizers, train_dataloader, epoch, confi
             optimizer.step()
 
             # Update Progressbar and log to wandb
-            config['train_loss_track'] = (9*config['train_loss_track'] + loss)/10
+            config['train_loss_track'] = (9*config['train_loss_track'] + loss.item())/10
             tepoch.set_description(f"Epoch {epoch}")
             tepoch.set_postfix(loss = config['train_loss_track'])
             wandb.log({"epoch": epoch})
@@ -78,7 +78,7 @@ def gan_train_fn(models, loss_fn, optimizers, train_dataloader, epoch, config, d
             opt_gen.step()
             
             # Update Progressbar and log to wandb
-            config['train_loss_track'] = (9*config['train_loss_track'] + (G_loss + D_loss))/10
+            config['train_loss_track'] = (9*config['train_loss_track'] + (G_loss.item() + D_loss.item()))/10
             tepoch.set_description(f"Epoch {epoch}")
             tepoch.set_postfix(loss = config['train_loss_track'])
             wandb.log({"epoch": epoch})

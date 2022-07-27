@@ -3,6 +3,7 @@ import argparse
 import wandb
 import os
 import torch
+import sys
 from utils.reproducability import set_seed, set_device
 from utils.data_handling import get_dataloaders, load_model, save_checkpoint
 from utils.loss_functions import get_loss_function
@@ -17,8 +18,7 @@ def main():
     parser.add_argument("--config_path", default="configs/classic/train.yaml")
     args = parser.parse_args()
     config = yaml.safe_load(open(args.config_path, "r"))
-    seed = config['seed']
-    epochs = config['epochs']
+    yaml.dump(config, sys.stdout)
 
     # Wandb support
     initialize(config)  
@@ -28,7 +28,7 @@ def main():
         torch.autograd.set_detect_anomaly(True)
 
     # Set seed and device
-    set_seed(seed)
+    set_seed(config['seed'])
     device = set_device(config['device'])
 
     # Create Dataset and Dataloader
@@ -48,7 +48,7 @@ def main():
     val_fn = get_val_fn(config)
 
     # Loop through the Epochs
-    for epoch in range(config['epoch_count'], epochs):
+    for epoch in range(config['epoch_count'], config['epochs']):
         # Run through the epoch
         train_fn(models, loss_fn, optimizers, train_dataloader, epoch, config, device)
 

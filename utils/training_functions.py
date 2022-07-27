@@ -66,7 +66,8 @@ def gan_train_fn(models, loss_fn, optimizers, train_dataloader, epoch, config, d
             D_loss = (D_real_loss + D_fake_loss)
             opt_disc.zero_grad()
             D_loss.backward()
-            opt_disc.step()
+            if batch%2 == 0:
+                opt_disc.step()
 
             # Train Generator
             D_fake = disc(A, B_fake)

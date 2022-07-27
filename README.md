@@ -13,11 +13,11 @@ Given a sattelite image we return the estimated road segmentation.<br><br>
 You should first write/choose a config file that determines the different design choices. Note that we have places example config files into the config/ folder. What parameter determines what is descibed below.<br>
 - To Train:
     ```
-    python3 train.py --<path_to_your_config_file>
+    python3 train.py --config_path <path_to_your_config_file>
     ```
 - To Test:
     ```
-    python3 test.py --<path_to_your_config_file>
+    python3 test.py --config_path <path_to_your_config_file>
     ```
 
 ## Google dataset creation

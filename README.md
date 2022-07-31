@@ -33,3 +33,7 @@ You should first write/choose a config file that determines the different design
     python3 delete_empty_masks.py
     python3 normalize_color.py
     ```
+
+## Reproduce our Submission
+1. Train all 5 classical models on the data that we provide
+2. Create a submission using all 5 trained models using the ensemble.py script

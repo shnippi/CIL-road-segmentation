@@ -1,3 +1,10 @@
+"""
+#
+# This file contains our U-Net implementation that uses ConvNext as a backbone for feature extraction.
+#  
+"""
+
+
 import torch
 import torch.nn as nn
 from timm.models.layers import trunc_normal_, DropPath

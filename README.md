@@ -8,6 +8,9 @@ Given a sattelite image we return the estimated road segmentation.<br><br>
 2. If you want to use the ConvNext model or Drn-D you have to download their pretrained weights and place them into models/pretrained:
     - [ConvNext](https://dl.fbaipublicfiles.com/convnext/convnext_xlarge_22k_1k_384_ema.pth)
     - [Drn-D-105](https://drive.google.com/drive/folders/1fIsCB877l37cFAJomoQzNrEYPqwMwZ4Q)
+3. Set Up the conda environment
+    - conda env create -f environment.yml -n cil
+    - conda activate cil
 
 ## Train, Finetune and Test
 You should first write/choose a config file that determines the different design choices. Note that we have places example config files into the config/ folder. What parameter determines what is descibed below.<br>

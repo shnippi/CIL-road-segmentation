@@ -1,4 +1,4 @@
-# CIL-road-segmentation
+# CIL-road-segmentation [[PDF](https://github.com/shnippi/CIL-road-segmentation/blob/master/results/Report.pdf)]
 Road segmentation is the task of labeling all pixels of an input satellite image as road or no-road. This is a popular problem in computer vision with applications in GPS navigation systems or autonomous driving. In recent years a plethora of different network architectures have been presented, achieving amazing results. These methods all look at road segmentation as a fully supervised task and present discriminative models. In this paper we interpret road segmentation as an image to image translation problem that can be solved with generative models like conditional generative adversarial networks. We compare the classic and generative methods over a variety of different network architectures and find the generative approach achieves segmentation results on par with the traditional classic approach.
 
 ## Setup

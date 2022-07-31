@@ -13,7 +13,7 @@ epoch_count: 0 # For which epoch to start and load a checkpoint
 # These are some settings you might want to change
 wandb_logging: False
 loss_function: "BCELoss" # DiceLoss, BCELoss, L1Loss
-epochs: 100
+epochs: 30
 batch_size: 1
 learning_rate: 0.0002
 image_height: 384 

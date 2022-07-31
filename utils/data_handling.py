@@ -28,20 +28,24 @@ def load_model(config, device):
     Return a dictionary of all the needed models. In Case of a GAN the dictionary contains the discriminator and generator.
     '''
     # Model selection
+    if config['transformation'] == 'label':
+        out_channels = 1
+    elif config['transformation'] == 'rgb':
+        out_channels = 3
     if config['model'] == "unet":
-        gen = UNet(in_channels=3, out_channels=3).to(device)
+        gen = UNet(in_channels=3, out_channels=out_channels).to(device)
     elif config['model'] == 'drnA':
-        gen = DRN_A(in_channels=3, out_channels=1).to(device)
+        gen = DRN_A(in_channels=3, out_channels=out_channels).to(device)
     elif config['model'] == 'drnD':
-        gen = DRN_D(in_channels=3, out_channels=1).to(device)
+        gen = DRN_D(in_channels=3, out_channels=out_channels).to(device)
     elif config['model'] == 'pix2pix':
-        gen = Pix2Pix_Generator(in_channels=3, out_channels=1).to(device)
+        gen = Pix2Pix_Generator(in_channels=3, out_channels=out_channels).to(device)
     elif config['model'] == 'pix2pixHD':
-        gen = Pix2PixHD_Generator(in_channels=3, out_channels=1).to(device)
+        gen = Pix2PixHD_Generator(in_channels=3, out_channels=out_channels).to(device)
     elif config['model'] == 'unet3plus':
-        gen = Unet3plus(in_channels=3, out_channels=1).to(device)
+        gen = Unet3plus(in_channels=3, out_channels=out_channels).to(device)
     elif config['model'] == 'convnext_unet':
-        gen = ConvNext_Unet(in_channels=3, out_channels=1).to(device)
+        gen = ConvNext_Unet(in_channels=3, out_channels=out_channels).to(device)
     else:
         raise ValueError("Your specified model does not exist")
 
@@ -51,7 +55,7 @@ def load_model(config, device):
         wandb.watch(models['gen'])
         print("Number of trainable Parameters: ", count_parameters(gen))
     elif config['generation_mode'] == 'gan':
-        disc = PatchGAN_Descriminator(in_channels=6).to(device)
+        disc = PatchGAN_Descriminator(in_channels=out_channels+3).to(device)
         models = {'gen': gen, 'disc': disc}
         wandb.watch((models['gen'], models['disc']))
         print("Number of trainable Parameters (gen): ", count_parameters(gen))
@@ -62,7 +66,6 @@ def load_model(config, device):
     # If load_from_checkpoint is enabled we load the model checkpoints
     if config['load_from_checkpoint']:
         models = load_checkpoint(config, models)
-
     return models
     
 
@@ -114,13 +117,12 @@ def load_checkpoint(config, models):
         path_gen = os.path.join(config['checkpoint_load_pth'], filename_gen)
         checkpoint = torch.load(path_gen, config['device'])
         models['gen'].load_state_dict(checkpoint["state_dict"])
-    elif config['generation_mode'] == 'gan':
+    elif config['modgeneration_modeel'] == 'gan':
         # Load generator
         filename_gen =  'epoch_' + str(config['epoch_count']) + '_' +  config['model'] + '_gen' + '.pth.tar'
         path_gen = os.path.join(config['checkpoint_load_pth'], filename_gen)
         checkpoint = torch.load(path_gen, config['device'])
         models['gen'].load_state_dict(checkpoint["state_dict"])
-
         # Load discriminator
         filename_disc =  'epoch_' + str(config['epoch_count']) + '_' +  config['model'] + '_disc' + '.pth.tar'
         path_disc = os.path.join(config['checkpoint_load_pth'], filename_disc)
@@ -128,7 +130,6 @@ def load_checkpoint(config, models):
         models['disc'].load_state_dict(checkpoint["state_dict"])
     else:
         raise ValueError("Your specified model does not exist")
-
     return models
 
 

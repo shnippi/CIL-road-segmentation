@@ -3,14 +3,14 @@
 
 # CHANGE THIS TO THE SETTINGS YOU WANT
 model: "unet" # unet, drnA, drnD, pix2pix, pix2pixhd, unet3plus, convnext_unet
-epoch_count: 2 # For which epoch to start and load a checkpoint
-checkpoint_load_pth: "models/checkpoints/dummy-ZiT4FC6CRz6G72B4Td2nB9"
+epoch_count: 30 # For which epoch to start and load a checkpoint
+checkpoint_load_pth: "models/checkpoints/wandbrun-xyz-uvw"
 #################################################################
 
 # Additional settings
 wandb_logging: False
 loss_function: "DiceLoss" # DiceLoss, BCELoss, L1Loss
-epochs: 10
+epochs: 30
 batch_size: 1
 learning_rate: 0.0002
 image_height: 384 

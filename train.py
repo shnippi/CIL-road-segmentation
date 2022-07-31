@@ -21,7 +21,7 @@ from utils.wandb import initialize
 def main():
     # Config arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config_path", default="configs/gan_roadmap/train.yaml")
+    parser.add_argument("--config_path", default="configs/classic/train.yaml")
     args = parser.parse_args()
     config = yaml.safe_load(open(args.config_path, "r"))
     yaml.dump(config, sys.stdout)

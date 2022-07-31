@@ -9,8 +9,10 @@ Road segmentation is the task of labeling all pixels of an input satellite image
     - [ConvNext](https://dl.fbaipublicfiles.com/convnext/convnext_xlarge_22k_1k_384_ema.pth)
     - [Drn-D-105](https://drive.google.com/drive/folders/1fIsCB877l37cFAJomoQzNrEYPqwMwZ4Q)
 3. Set Up the conda environment
-    - conda env create -f environment.yml -n cil
-    - conda activate cil
+    ```
+    conda env create -f environment.yml -n cil
+    conda activate cil
+    ```
 
 ## Train, Finetune and Test
 You should first write/choose a config file that determines the different design choices. Note that we have places example config files into the config/ folder. What parameter determines what is descibed below.<br>
@@ -41,8 +43,8 @@ You should first write/choose a config file that determines the different design
 
 ## Config Guide
 Here we describe what the different parameters represent:
- - **batch_size**: Batch size. Hence the number of data samples per patch. In all experiments we used batch size equal to one.
- - **beta1**: Hyperparameter for the momentum in the Adam optimizer. In the classic mode we choose 0.9 and for GAN's we choose 0.5
+ - **batch_size**: Batch size. Hence the number of data samples per patch. In all experiments we used batch size equal to 1.
+ - **beta1**: Hyperparameter for the momentum in the Adam optimizer. In the classic mode we choose 0.9 and for GAN's we choose 0.5.
  - **beta2**: Hyperparameter for the second momentum in the Adam optimizer. We choose 0.999 for all experiments.
  - **checkpoint_load_pth**: Path to your file location where you placed your model checkpoint.
  - **checkpoint_root**: Path to your file location where we will save your model checkpoints. We save a checkpoint after every epoch.
@@ -56,17 +58,17 @@ Here we describe what the different parameters represent:
  - **image_height**: To what height you would like to resize your image before feeding it into the network. Default is 384. For the pix2pix model you should however choose 256 or 512.
  - **image_width**: To what width you would like to resize your image before feeding it into the network. Default is 384. For the pix2pix model you should however choose 256 or 512.
  - **learning_rate**: Learning rate paramter for the Adam optimizer. Default is set to 0.0002.
- - **load_from_checkpoint**: This Flag needs to be set to True if we want to load from a checkpoint. Otherwise it should be set to False.
+ - **load_from_checkpoint**: This flag needs to be set to True if we want to load from a checkpoint. Otherwise it should be set to False.
  - **loss_function**: We implemented different loss functions in utils/loss_functions.py to choose from. We usually use BCELoss during pretraining and DiceLoss during finetuning. In GAN-Map we choose the L1Loss.
  - **model**: We implemented a variety of differnt network architectures that are used to generate the mask/roadmap. Your choices are: unet, drnA, drnD, pix2pix, pix2pixhd, unet3plus, convnext_unet. More details are provided in the paper and in the code.
  - **num_workers**: The number of threads you can use. Default is set to 8.
  - **pin_memory**: For faster training it is useful to set this to True.
  - **result_dir**: Path to the directory where you want your results to be stored. Default ist "results"
- - **root_A**: Path to the training data directroy that holds the images of domain A 
- - **root_B**: Path to the training data directroy that holds the images of domain B
+ - **root_A**: Path to the training data directroy that holds the images of domain A.
+ - **root_B**: Path to the training data directroy that holds the images of domain B.
  - **save_checkpoint**: This needs to be set to True if we want to save model and optimizer checkpoints.
- - **seed**: Initial seed for reproducability
+ - **seed**: Initial seed for reproducability.
  - **train_loss_track**: Initial value for the training loss we track. We employ an average Meter.
- - **transformation**: If the domain B is a mask you should choose 'label'. If the domain B is an rgb image like a roadmap you should choose 'rgb'
+ - **transformation**: If the domain B is a mask you should choose 'label'. If the domain B is an rgb image like a roadmap you should choose 'rgb'.
  - **val_loss_track**: Initial value for the validation loss we track. We employ an average Meter.
  - **wandb_logging**: We support logging via weights and biases. Set this flag to True to log your results. Otherwise turn if off by setting the flag to false.

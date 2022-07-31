@@ -44,7 +44,7 @@ def classic_val_fn(models, loss_fn, val_dataloader, epoch, config, device):
                 loss = loss_fn(B_fake, B)
 
                 # Track and log the loss
-                config['val_loss_track'] = (9*config['val_loss_track'] + loss)/10
+                config['val_loss_track'] = (9*config['val_loss_track'] + loss.item())/10
                 wandb.log({"val-loss": config['val_loss_track']})
                 tepoch.set_postfix(loss = config['val_loss_track'])
 
@@ -96,7 +96,7 @@ def gan_val_fn(models, loss_fn, val_dataloader, epoch, config, device):
                 loss = loss_fn(B_fake, B)
 
                 # Update Progressbar and log to wandb
-                config['val_loss_track'] = (9*config['val_loss_track'] + loss)/10
+                config['val_loss_track'] = (9*config['val_loss_track'] + loss.item())/10
                 wandb.log({"loss-val": config['val_loss_track']})
                 tepoch.set_postfix(loss = config['val_loss_track'])
 

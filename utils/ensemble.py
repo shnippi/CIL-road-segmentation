@@ -1,4 +1,4 @@
-"""
+""" 
 # This script creates a ensemble submission using all submissions from other models inside the SUBMISSION_PATH folder
 """
 

@@ -1,3 +1,9 @@
+"""
+#
+# This file contains functions to help loading a paired dataset containing of satellite images and masks
+#  
+"""
+
 import os
 from torch.utils.data import Dataset
 from PIL import Image

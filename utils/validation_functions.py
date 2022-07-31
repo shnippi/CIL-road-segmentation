@@ -1,3 +1,9 @@
+"""
+#
+# This file contains functions to validate the different approaches, gan or cloassic
+#  
+"""
+
 import torch
 import wandb
 from tqdm import tqdm

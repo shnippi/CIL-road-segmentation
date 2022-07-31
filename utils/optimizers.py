@@ -1,3 +1,11 @@
+"""
+#
+# This file contains our optimizers.
+# We have Adam for the classic approach and one for the generative approach
+# It also provides functions to load optimizer checkpoints
+#  
+"""
+
 import torch.optim as optim
 import torch
 import os

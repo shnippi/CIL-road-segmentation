@@ -1,3 +1,10 @@
+"""
+#
+# This file takes a set of reference images and a set of target images and performs lightning normalization using histogram equalization.
+#  
+"""
+
+
 from PIL import Image
 import glob
 import io

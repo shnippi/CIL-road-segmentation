@@ -1,3 +1,9 @@
+"""
+#
+# This file sets the correct configuration for a model depending on the dataset/task used.
+#  
+"""
+
 import imp
 import torch
 import wandb

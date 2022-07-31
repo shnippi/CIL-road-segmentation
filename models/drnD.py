@@ -1,3 +1,9 @@
+"""
+#
+# This file contains our implementation of the DRN-D model.
+#  
+"""
+
 import torch
 import math
 import torch.nn as nn

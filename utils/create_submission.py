@@ -1,3 +1,9 @@
+"""
+#
+# This file contains functions that are used to create a submission from either roadmap images or masks
+#  
+"""
+
 import os
 import numpy as np
 import re

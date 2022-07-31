@@ -1,3 +1,9 @@
+"""
+#
+# This file contains our implementation of the original Pix2pixHD
+#  
+"""
+
 import torch 
 import torch.nn as nn
 import numpy as np

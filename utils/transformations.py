@@ -1,3 +1,9 @@
+"""
+#
+# This file contains transformation functions for normalizing and resizing of the data set
+#  
+"""
+
 from torchvision import transforms
 
 def get_transforms(config):

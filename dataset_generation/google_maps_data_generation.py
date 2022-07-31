@@ -1,3 +1,11 @@
+"""
+#
+# This is the script to scrape images from google maps using their API
+# We used this to create our own dataset
+#  
+"""
+
+
 #!/usr/bin/env python
 # City location and code adaption taken from https://github.com/Walon1998/RoadsegmentSubmission
 import glob

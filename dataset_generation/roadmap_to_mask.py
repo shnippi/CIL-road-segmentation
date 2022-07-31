@@ -1,3 +1,9 @@
+"""
+#
+# This script creates masked images from roadmap images using a thresholding algorithm
+#  
+"""
+
 # Imports PIL module 
 import os
 from PIL import Image

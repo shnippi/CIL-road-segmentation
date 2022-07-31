@@ -1,3 +1,9 @@
+"""
+#
+# This file contains the provided functions from the kaggle competition to turn submissions into masks
+#  
+"""
+
 #!/usr/bin/python
 from PIL import Image
 import math

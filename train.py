@@ -1,3 +1,9 @@
+"""
+#
+# This script creates predictions and a submission for a model loaded from a configuration file
+#  
+"""
+
 import yaml
 import argparse
 import wandb

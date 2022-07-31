@@ -1,3 +1,9 @@
+"""
+#
+# This file contains our implementation of the vanilla U-Net
+#  
+"""
+
 import torch
 import torch.nn as nn
 import torchvision.transforms.functional as TF

@@ -1,3 +1,9 @@
+"""
+#
+# This file provides functions that are used for training a model
+#  
+"""
+
 import torch
 import wandb
 from tqdm import tqdm

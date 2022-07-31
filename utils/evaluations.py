@@ -1,3 +1,9 @@
+"""
+#
+# This file contains functions that help evaluation a model
+#  
+"""
+
 import torch
 import torchvision
 import wandb

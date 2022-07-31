@@ -1,3 +1,9 @@
+"""
+#
+# This file provides functions that create predictions from tests data
+#  
+"""
+
 import os
 from torchvision import transforms
 from tqdm import tqdm

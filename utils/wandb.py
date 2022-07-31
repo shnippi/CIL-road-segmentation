@@ -1,3 +1,9 @@
+"""
+#
+# This file contains the initializer for wandb that can be used for weights and biases logging
+#  
+"""
+
 import re
 import wandb
 

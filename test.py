@@ -1,3 +1,9 @@
+"""
+#
+# This script is used together with a configuration file to train a model
+#  
+"""
+
 import yaml
 import argparse
 import os

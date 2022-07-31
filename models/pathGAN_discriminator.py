@@ -1,3 +1,9 @@
+"""
+#
+# This file contains our implementation of patch gan discriminator.
+#  
+"""
+
 import torch
 import torch.nn as nn
 import numpy as np

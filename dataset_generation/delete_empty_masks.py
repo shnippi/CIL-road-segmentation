@@ -1,3 +1,11 @@
+"""
+#
+# This script removes all images that don't show enough road.
+# We dod this by looking at the mask and if there is not enough road labeled pixels we remove the image from the dataset
+#
+"""
+
+
 import os
 from PIL import Image
 

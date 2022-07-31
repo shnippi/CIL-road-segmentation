@@ -1,3 +1,9 @@
+"""
+#
+# This file sets the seed for everything that uses rng so we can get higher reproducability
+#  
+"""
+
 import torch
 import os
 import random

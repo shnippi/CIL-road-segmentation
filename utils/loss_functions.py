@@ -1,3 +1,10 @@
+"""
+#
+# This file contains our different loss functions
+# We have the BCEWithLogits, BCELOSS, DiceLoss and L1Loss
+#  
+"""
+
 import torch.nn as nn
 import torch
 from torch.autograd import Variable

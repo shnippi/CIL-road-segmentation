@@ -30,10 +30,10 @@ class PairedDataset(Dataset):
         #image_B = Image.open(item_B)
 
         image_A = Image.open(item_A).convert('RGB')
-        image_B = Image.open(item_B).convert('RGB').convert('L')
+        image_B = Image.open(item_B).convert('RGB')
 
         image_A = self.transform(image_A)
-        #image_B = self.transform(image_B)
+        image_B = self.transform(image_B)
 
         return {'A': image_A, 'B': image_B}
 

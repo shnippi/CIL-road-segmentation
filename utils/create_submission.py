@@ -69,7 +69,9 @@ def _create_masks_from_roadmaps(config):
 
             roadmap = Image.open(f) 
             roadmap = np.array(roadmap.convert('RGB'))
-            mask = (np.floor(rgb2gray(np.floor(roadmap / 255)))*255).astype(np.uint8)
+            f_thresh = np.vectorize(lambda x: 255 if x > 249/256 else 0)
+            mask = rgb2gray(roadmap)
+            mask = f_thresh(mask).astype(np.uint8)
             mask = np.expand_dims(mask, axis=2)
             mask = np.repeat(mask, 3, axis=2)
             mask = Image.fromarray(mask)

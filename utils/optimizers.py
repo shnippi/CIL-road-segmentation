@@ -16,8 +16,6 @@ def get_optimizers(models, config):
     else:
         raise ValueError("Your specified model mode does not exist (get_optimizers)")
     
-    if config['load_from_checkpoint']:
-        optimizers = load_optimizer_checkpoint(config, optimizers)
 
     return optimizers
 

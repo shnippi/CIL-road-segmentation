@@ -3,8 +3,8 @@
 
 # CHANGE THIS TO THE SETTINGS YOU WANT
 model: "unet" # unet, drnA, drnD, pix2pix, pix2pixhd, unet3plus, convnext_unet
-epoch_count: 10 # For which epoch to start and load a checkpoint
-checkpoint_load_pth: "models/checkpoints/wandbrun-xyz-uvw"
+epoch_count: 2 # For which epoch to start and load a checkpoint
+checkpoint_load_pth: "models/checkpoints/dummy-ZiT4FC6CRz6G72B4Td2nB9"
 #################################################################
 
 # Additional settings

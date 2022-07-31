@@ -23,7 +23,7 @@ def load_model(config, device):
     '''
     # Model selection
     if config['model'] == "unet":
-        gen = UNet(in_channels=3, out_channels=1).to(device)
+        gen = UNet(in_channels=3, out_channels=3).to(device)
     elif config['model'] == 'drnA':
         gen = DRN_A(in_channels=3, out_channels=1).to(device)
     elif config['model'] == 'drnD':
@@ -45,7 +45,7 @@ def load_model(config, device):
         wandb.watch(models['gen'])
         print("Number of trainable Parameters: ", count_parameters(gen))
     elif config['generation_mode'] == 'gan':
-        disc = PatchGAN_Descriminator().to(device)
+        disc = PatchGAN_Descriminator(in_channels=6).to(device)
         models = {'gen': gen, 'disc': disc}
         wandb.watch((models['gen'], models['disc']))
         print("Number of trainable Parameters (gen): ", count_parameters(gen))
@@ -70,7 +70,7 @@ def save_checkpoint(models, optimizers, config, epoch):
     if not os.path.exists(directory):
         os.makedirs(directory)
     
-    if config['model'] == "classic":
+    if config['generation_mode'] == "classic":
         filename =  'epoch_' + str(epoch) + '_' + config['model']+ '_gen' + '.pth.tar'
         path = os.path.join(directory, filename)
         checkpoint = {
@@ -78,7 +78,7 @@ def save_checkpoint(models, optimizers, config, epoch):
             "optimizer": optimizers['opt_gen'].state_dict(),
         }
         torch.save(checkpoint, path)
-    elif config['model'] == 'gan':
+    elif config['generation_mode'] == 'gan':
         # Save generator
         filename =  'epoch_' + str(epoch) + '_' + config['model']+ '_gen' + '.pth.tar'
         path = os.path.join(directory, filename)
@@ -108,7 +108,7 @@ def load_checkpoint(config, models):
         path_gen = os.path.join(config['checkpoint_load_pth'], filename_gen)
         checkpoint = torch.load(path_gen, config['device'])
         models['gen'].load_state_dict(checkpoint["state_dict"])
-    elif config['modgeneration_modeel'] == 'gan':
+    elif config['generation_mode'] == 'gan':
         # Load generator
         filename_gen =  'epoch_' + str(config['epoch_count']) + '_' +  config['model'] + '_gen' + '.pth.tar'
         path_gen = os.path.join(config['checkpoint_load_pth'], filename_gen)
